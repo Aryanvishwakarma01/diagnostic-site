@@ -2,7 +2,7 @@ import { useState } from 'react';
 import img1 from './img1.jpg'; 
 import img2 from './img2.jpg'; 
 import img3 from './img3.jpg'; 
-
+import { Link } from 'react-router-dom';
 function imageSlider(){
     const slides = [
   {
@@ -46,8 +46,8 @@ function Slider() {
                 <h1 id="title" className="text-6xl font-bold text-wrap">3D/4D/5D Ultrasound</h1>
                 <p id="description" className="text-2xl">Ultrasounds are advanced imaging<br/> technologies used in prenatal care.</p>
                 <div className="buttons flex gap-2 text-black">
-                    <button className="py-3 px-5 rounded-3xl bg-white/80 text-xl font-medium">Enquiry Now</button>
-                    <button className="py-3 px-5 rounded-3xl bg-white/80 text-xl font-medium">Call Now</button>
+                    <button className="py-3 px-5 rounded-3xl bg-white/80 text-xl font-medium cursor-pointer" ><Link to="../ContactUs">Enquiry Now</Link></button>
+                    <button className="py-3 px-5 rounded-3xl bg-white/80 text-xl font-medium cursor-pointer"><a href="tel:9646548046">Call Now</a></button>
                 </div>
             </div>
             <div className="right absolute right-0 h-full">
