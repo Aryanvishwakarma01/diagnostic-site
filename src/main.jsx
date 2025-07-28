@@ -7,12 +7,14 @@ import Page2 from './components/Page2.jsx'
 import Facilities from './components/Facilities.jsx'
 import Footer from './components/Footer.jsx'
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <Navbar />
+   {/* <Navbar />
     <Slider />
     <Page2 />
     <Facilities />
-    <Footer />
+    <Footer /> */}
+    <App />
   </StrictMode>,
 )
