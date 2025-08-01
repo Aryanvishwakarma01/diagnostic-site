@@ -44,10 +44,10 @@ function Slider() {
   const slide = slides[current];
 
   return (
-    <div className={`slider w-full ${slide.bg} h-[500px] overflow-hidden flex items-center px-8 text-white relative`}>
+    <div id='slider' className={`w-full ${slide.bg} h-[500px] overflow-hidden flex items-center px-8 text-white relative`}>
       
       {/* Left Content */}
-      <div className={`left w-[30%] h-full flex items-center justify-center flex-col gap-6 text-center transition-opacity duration-300
+      <div id='left' className={`w-[30%] h-full flex items-center justify-center flex-col gap-6 text-center transition-opacity duration-300
         ${isFading ? "opacity-0" : "opacity-100"}`}>
         <h1 className="text-4xl font-bold text-wrap">{slide.title}</h1>
         <p className="text-2xl">{slide.description}</p>
@@ -62,7 +62,7 @@ function Slider() {
       </div>
 
       {/* Right Image Slide-in */}
-      <div className="right relative left-20 right-0 h-full w-[70%] overflow-hidden flex items-center justify-center transition-opacity duration-500">
+      <div id="right" className="relative left-20 right-0 h-full w-[70%] overflow-hidden flex items-center justify-center transition-opacity duration-500">
         <img
           key={current} // re-trigger animation on change
           src={slide.image}
