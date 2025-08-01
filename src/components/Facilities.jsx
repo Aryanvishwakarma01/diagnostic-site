@@ -37,8 +37,8 @@ const Facilities = () => {
       </div>
 
       <div className='flex items-center justify-center gap-5'>
-        <button onClick={reloadPage} className='border px-8 py-3 rounded-4xl bg-green-700 text-white text-[18px] font-bold cursor-pointer'>View More</button>
-        <button className='border px-8 py-3 rounded-4xl bg-green-700 text-white text-[18px] font-bold cursor-pointer'><a href="tel:9646548046"><i className="ri-phone-fill"></i> Call Now</a>
+        <button onClick={reloadPage} className='border px-8 py-3 rounded-4xl bg-green-700 hover:bg-orange-500 transition duration-300 text-white text-[18px] font-bold cursor-pointer'>View More</button>
+        <button className='border px-8 py-3 rounded-4xl bg-green-700 hover:bg-orange-500 transition duration-300  text-white text-[18px] font-bold cursor-pointer'><a href="tel:9646548046"><i className="ri-phone-fill"></i> Call Now</a>
 </button>
       </div>
     </div>
