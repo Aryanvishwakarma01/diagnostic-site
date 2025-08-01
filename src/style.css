@@ -81,6 +81,22 @@ html, body{
   .page2_left p{
     font-size: 12px;
   }
+  .slider .left{
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+  }
+   .slider .right{
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    left:0;
+
+  }
+  .slider .right img{
+    border: none;
+    border-radius:2px;
+  }
 }
 
 @layer utilities {

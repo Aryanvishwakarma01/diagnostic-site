@@ -44,7 +44,7 @@ function Slider() {
   const slide = slides[current];
 
   return (
-    <div className={`w-full ${slide.bg} h-[500px] overflow-hidden flex items-center px-8 text-white relative`}>
+    <div className={`slider w-full ${slide.bg} h-[500px] overflow-hidden flex items-center px-8 text-white relative`}>
       
       {/* Left Content */}
       <div className={`left w-[30%] h-full flex items-center justify-center flex-col gap-6 text-center transition-opacity duration-300
