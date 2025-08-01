@@ -18,7 +18,7 @@ function Navbar() {
             <li className="phone_no hover:bg-orange-500 bg-green-600 p-2 text-white transition-all duration-400 hidden"><a href="tel:9646548046"> +91-9646548046</a></li>
             <IoIosMenu onClick={() => setPhoneOpen(prev => !prev)} className='menu_btn text-4xl cursor-pointer sm:hidden' />
             <RightNav />
-            <div  className={`fixed w-full top-0 h-screen -left-[100%] z-50 sm:hidden bg-black/50 transition-all duration-300 ${phoneOpen && "left-0"}`}>
+            <div  className={`fixed w-full top-0 h-screen -left-[100%] z-50  bg-black/50 transition-all duration-300 ${phoneOpen && "left-0"}`}>
                 <ul className="phone_menu z-51 list-none bg-white w-[60%] h-screen flex flex-col items-start px-5 py-15 gap-5 text-base font-medium text-black cursor-pointer relative">
                 <IoCloseSharp onClick={() => setPhoneOpen(false)} className='absolute text-2xl border right-5 top-5' />
                     <li className="text-orange-500 border-b-2 hover:text-orange-600 transition"><Link to="/">HOME</Link></li>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 function RightNav() {
   return (
-    <div className=''>
+    <div className='right_nav'>
         <ul className=" list-none flex items-center gap-10 text-base font-medium text-black cursor-pointer">
                 <li className="text-orange-500 hover:text-orange-600 transition"><Link to="/">HOME</Link></li>
                 <li className="hover:text-orange-500 transition"><Link to="../About">ABOUT US</Link></li>
