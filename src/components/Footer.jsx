@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 const Footer = () => {
   return (
     <>
-    <div className=" w-full bg-gray-800 flex items-start justify-between px-20 py-8">
-        <div className="flex flex-col w-[25%] text-white gap-5"><h1 className="border-b-2 text-center text-2xl font-bold py-2">About Us</h1>
+    <div className="footer w-full bg-gray-800 flex items-start justify-between px-20 py-8">
+        <div className="footer_card flex flex-col w-[25%] text-white gap-5"><h1 className="border-b-2 text-center text-2xl font-bold py-2">About Us</h1>
         <p className="text-sm text-justify">Harsh Lab & Diagnostic, located in [Sector/Area Name, City], is a trusted name among diagnostic centers in the region. Known for its accurate and timely services, it has quickly earned a strong reputation.</p>
         <div className="flex gap-3 text-2xl">
             <i className="ri-facebook-fill cursor-pointer"></i>

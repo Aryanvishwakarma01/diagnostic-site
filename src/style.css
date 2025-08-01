@@ -11,10 +11,51 @@ html, body{
     background-color: grey;
 } */
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
   .navbar {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
   }
+  .left_nav img{
+    width: 80px;
+  }
+  .menu{
+    display: block;
+  }
+  .right_nav{
+    display:none;
+  }
+  .menu_btn{
+    display: block;
+  }
+  .facilities{
+    padding: 10px 10px;
+    height: 50vh;
+  }
+  .facility_card{
+    height: 200px;
+    width: 120px;
+  }
+  .facility_card h1{
+    font-size: 8px;
+  }
+  .facility_card img{
+    height: 92%;
+  }
+  .phone_no{
+    display: block;
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+  .footer{
+    padding: 10px 20px;
+  }
+  .footer_card{
+    width: 35%;
+  }
+
   .page2{
     flex-direction: column;
     padding: 10px;
@@ -34,7 +75,7 @@ html, body{
   .page2_left p{
     font-size: 12px;
   }
-} */
+}
 
 @layer utilities {
   @keyframes slide-in {

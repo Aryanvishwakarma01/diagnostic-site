@@ -25,13 +25,13 @@ const Facilities = () => {
     location.reload(); // This reloads the current page
   }
   return (
-    <div className="w-full min-h-[80vh] bg-gray-100 p-10 flex flex-col gap-5">
+    <div className="facilities w-full h-[80vh] bg-gray-100 p-10 flex flex-col gap-5">
       <h1 className="text-4xl text-center font-bold">
         OUR <span className="text-orange-500">FACILITIES</span>
       </h1>
       <div id="facilities" className="flex items-center justify-center mt-10">
         {facilitiesArr.map((item, index) => (
-          <div key={index} className="h-[250px] w-[350px] bg-white rounded-xl overflow-hidden shadow-md mx-auto">
+          <div key={index} className="facility_card h-[250px] w-[350px] bg-white rounded-xl overflow-hidden shadow-md mx-auto">
             <img src={item.image} className="h-[85%] w-full object-cover" alt={item.name} />
             <h1 className="text-center text-xl font-bold">{item.name}</h1>
           </div>
