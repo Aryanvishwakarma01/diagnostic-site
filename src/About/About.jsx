@@ -18,7 +18,7 @@ const About = () => {
     <h1 className='text-4xl font-bold'>
       About <span className='text-orange-600'>Harsh Lab & Diagnostic Centre</span>
     </h1>
-    <p className='text-gray-800 py-10 sm:py-0'>
+    <p className='text-gray-800 py-10 sm:py-5'>
       Harsh Lab & Diagnostic is a trusted name in medical diagnostics, committed to delivering accurate, timely, and affordable diagnostic solutions. Since our inception, we have focused on combining advanced technology with compassionate care to support patients and healthcare providers in making informed decisions.
       <br /><br />
       At Harsh Diagnostic, we offer a comprehensive range of diagnostic services including pathology, radiology, imaging, and specialized tests – all under one roof. Our facility is equipped with state-of-the-art machines and backed by a team of experienced pathologists, radiologists, lab technicians, and support staff who are dedicated to upholding the highest standards of quality and precision.

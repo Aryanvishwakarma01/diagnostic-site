@@ -26,9 +26,7 @@ const Facilities = () => {
   }
   return (
     <div className="facilities w-full bg-gray-100 p-10 flex flex-col gap-15">
-      <h1 className="text-4xl text-center font-bold">
-        OUR <span className="text-orange-500">FACILITIES</span>
-      </h1>
+      {/* <h1 className="text-4xl text-center font-bold">OUR <span className="text-orange-500">FACILITIES</span></h1> */}
       <div id="facilities" className="flex items-center justify-center">
         {facilitiesArr.map((item, index) => (
           <div key={index} className="facility_card h-[250px] w-[350px] bg-white rounded-xl overflow-hidden shadow-md mx-auto">
