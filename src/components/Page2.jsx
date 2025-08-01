@@ -11,7 +11,7 @@ const Page2 = () => {
         <button className='border py-4 px-10 rounded-4xl text-white bg-green-700 hover:bg-orange-500 transition duration-300 font-bold'><i className="ri-phone-fill"></i><a href="tel:9646548046"> Call Now</a></button>
       </div>
     </div>
-    <div className="page2_right w-3/5 sm:w-1/6  object-cover">
+    <div className="page2_right w-3/5 sm:w-1/6  object-cover ">
       <img src={Ultrasound} className="w-full h-full mt-5 m-auto" alt=""/>
     </div>
   </div>
