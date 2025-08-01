@@ -21,11 +21,49 @@ function Navbar() {
             <div  className={`fixed w-full top-0 h-screen -left-[100%] z-50  bg-black/50 transition-all duration-300 ${phoneOpen && "left-0"}`}>
                 <ul className="phone_menu z-51 list-none bg-white w-[60%] h-screen flex flex-col items-start px-5 py-15 gap-5 text-base font-medium text-black cursor-pointer relative">
                 <IoCloseSharp onClick={() => setPhoneOpen(false)} className='absolute text-2xl border right-5 top-5' />
-                    <li className="text-orange-500 border-b-2 hover:text-orange-600 transition"><Link to="/">HOME</Link></li>
-                    <li className="hover:text-orange-500 border-b-2 transition"><Link to="../Facility">FACILITIES</Link></li>
-                    {/* <li className="hover:text-orange-500 transition">DIAGNOSTIC SERVICES</li> */}
-                    <li className="hover:text-orange-500 border-b-2 transition"><Link to="../ContactUs">CONTACT US</Link></li>
-                    <li className="hover:text-orange-500 border-b-2 transition"><Link to="../About">ABOUT US</Link></li>
+                    <li className="transition">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-orange-500" : "text-black hover:text-orange-500"
+            }
+          >
+            HOME
+          </NavLink>
+        </li>
+
+
+        <li className="transition">
+          <NavLink
+            to="/Facility"
+            className={({ isActive }) =>
+              isActive ? "text-orange-500" : "text-black hover:text-orange-500"
+            }
+          >
+            FACILITIES
+          </NavLink>
+        </li>
+
+        <li className="transition">
+          <NavLink
+            to="/ContactUs"
+            className={({ isActive }) =>
+              isActive ? "text-orange-500" : "text-black hover:text-orange-500"
+            }
+          >
+            CONTACT US
+          </NavLink>
+        </li>
+        <li className="transition">
+          <NavLink
+            to="/About"
+            className={({ isActive }) =>
+              isActive ? "text-orange-500" : "text-black hover:text-orange-500"
+            }
+          >
+            ABOUT US
+          </NavLink>
+        </li>
                     
                 </ul>
             </div>
