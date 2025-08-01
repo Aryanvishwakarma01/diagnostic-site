@@ -82,7 +82,8 @@ html, body{
     font-size: 12px;
   }
   #slider{
-    padding: 10px 10px;
+    padding: 10px 10px; 
+    justify-content: center;
   }
   #slider #left{
     width: 100%;
@@ -98,6 +99,7 @@ html, body{
   }
   #slider #right img{
     border: none;
+    opacity: 0.8;
     border-radius:2px;
   }
 }
