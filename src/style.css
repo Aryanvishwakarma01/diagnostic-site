@@ -33,13 +33,17 @@ html, body{
   .facilities{
     padding: 30px 10px;
   }
+  #facilities{
+    flex-direction: column;
+    gap:20px;
+  }
 
   .facility_card{
-    height: 200px;
-    width: 120px;
+    height: 300px;
+    width:200px;
   }
   .facility_card h1{
-    font-size: 8px;
+    font-size: 12px;
   }
   .facility_card img{
     height: 92%;
