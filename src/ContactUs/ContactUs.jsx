@@ -6,7 +6,7 @@ const ContactUs = () => {
       <div className='relative flex items-center justify-center h-[300px] w-full mb-5'>
         <img src={img1} alt="" className='absolute inset-0 z-0 h-full w-full object-cover' />
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-        <h1 className='absolute text-center z-20 font-bold text-8xl text-white'>CONTACT US</h1>
+        <h1 className='absolute text-center z-20 font-bold text-6xl sm:text-8xl text-white'>CONTACT US</h1>
       </div>
      <div className='w-full flex flex-col gap-5 h-[50vh]'>
         <h1 className='text-center text-4xl font-bold'>CONTACT <span className='text-orange-500'>US</span></h1>
