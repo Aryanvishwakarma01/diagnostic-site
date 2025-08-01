@@ -31,8 +31,8 @@ html, body{
     display: block;
   }
   .facilities{
-    padding: 30px 10px;
-    height: 60vh;
+    padding: 10px 10px;
+    height: 70vh;
   }
   .facility_card{
     height: 200px;
