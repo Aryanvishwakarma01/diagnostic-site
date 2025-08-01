@@ -25,11 +25,11 @@ const Facilities = () => {
     location.reload(); // This reloads the current page
   }
   return (
-    <div className="facilities w-full h-[80vh] bg-gray-100 p-10 flex flex-col gap-5">
+    <div className="facilities w-full bg-gray-100 p-10 flex flex-col gap-15">
       <h1 className="text-4xl text-center font-bold">
         OUR <span className="text-orange-500">FACILITIES</span>
       </h1>
-      <div id="facilities" className="flex items-center justify-center mt-10">
+      <div id="facilities" className="flex items-center justify-center">
         {facilitiesArr.map((item, index) => (
           <div key={index} className="facility_card h-[250px] w-[350px] bg-white rounded-xl overflow-hidden shadow-md mx-auto">
             <img src={item.image} className="h-[85%] w-full object-cover" alt={item.name} />
@@ -38,7 +38,7 @@ const Facilities = () => {
         ))}
       </div>
 
-      <div className='flex items-center justify-center gap-5 mt-8'>
+      <div className='flex items-center justify-center gap-5'>
         <button onClick={reloadPage} className='border px-8 py-3 rounded-4xl bg-green-700 text-white text-[18px] font-bold cursor-pointer'>View More</button>
         <button className='border px-8 py-3 rounded-4xl bg-green-700 text-white text-[18px] font-bold cursor-pointer'><a href="tel:9646548046"><i className="ri-phone-fill"></i> Call Now</a>
 </button>
