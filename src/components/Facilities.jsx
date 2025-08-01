@@ -33,7 +33,7 @@ const Facilities = () => {
         {facilitiesArr.map((item, index) => (
           <div key={index} className="facility_card h-[250px] w-[350px] bg-white rounded-xl overflow-hidden shadow-md mx-auto">
             <img src={item.image} className="h-[85%] w-full object-cover" alt={item.name} />
-            <h1 className="text-center text-xl font-bold">{item.name}</h1>
+            <h1 className="text-center py-2 text-xl font-bold">{item.name}</h1>
           </div>
         ))}
       </div>
