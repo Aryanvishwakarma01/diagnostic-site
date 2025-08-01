@@ -10,9 +10,9 @@ function Navbar() {
     const [phoneOpen, setPhoneOpen] = useState(false)
 
     return (
-        <div className='navbar w-full flex items-center justify-between px-20 relative'>
+        <div className='navbar w-full flex items-center justify-between px-20 py-0 relative'>
             <div className="left_nav">
-                <img src={logo} alt="" className="w-[160px]" />
+                <img src={logo} alt="" className="w-[200px]" />
 
             </div>
             <li className="phone_no hover:bg-orange-500 bg-green-600 p-2 text-white transition-all duration-400 hidden"><a href="tel:9646548046"> +91-9646548046</a></li>
