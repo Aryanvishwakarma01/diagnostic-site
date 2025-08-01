@@ -70,11 +70,10 @@ html, body{
     width: 100%;
     text-align: center;
     padding: 10px;
-    position: absolute;
-    z-index: 10;
   }
   .page2_right{
     width: 100%;
+
   }
   .page2_left h1{
         font-size: 20px;
