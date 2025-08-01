@@ -3,30 +3,24 @@ import { Link } from 'react-router-dom';
 import RightNav from './RightNav';
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
+import { useState } from 'react';
 
 
 function Navbar() {
+    const [phoneOpen, setPhoneOpen] = useState(false)
 
-    function openMenu() {
-        const menu = document.getElementById("menu")
-        menu.style.display = "block";
-    }
-    function closeMenu(){
-         const menu = document.getElementById("menu")
-        menu.style.display = "none";
-    }
     return (
         <div className='navbar w-full flex items-center justify-between px-20 relative'>
             <div className="left_nav">
                 <img src={logo} alt="" className="w-[160px]" />
 
             </div>
-            <li className="phone_no hover:bg-orange-500 transition bg-green-600 p-2 text-white transition-all duration-400 hidden"><a href="tel:9646548046"> +91-9646548046</a></li>
-            <IoIosMenu onClick={openMenu} className='menu_btn text-4xl cursor-pointer hidden' />
+            <li className="phone_no hover:bg-orange-500 bg-green-600 p-2 text-white transition-all duration-400 hidden"><a href="tel:9646548046"> +91-9646548046</a></li>
+            <IoIosMenu onClick={() => setPhoneOpen(prev => !prev)} className='menu_btn text-4xl cursor-pointer sm:hidden' />
             <RightNav />
-            <div id='menu' className='absolute w-full left-0 top-0 h-screen z-50 hidden'>
-                <ul className="phone_menu relative list-none bg-white w-[60%] h-screen flex flex-col items-start px-5 py-15 gap-5 text-base font-medium text-black cursor-pointer">
-                <IoCloseSharp onClick={closeMenu} className='absolute text-2xl border right-5 top-5' />
+            <div  className={`fixed w-full top-0 h-screen -left-[100%] z-50 sm:hidden bg-black/50 transition-all duration-300 ${phoneOpen && "left-0"}`}>
+                <ul className="phone_menu z-51 list-none bg-white w-[60%] h-screen flex flex-col items-start px-5 py-15 gap-5 text-base font-medium text-black cursor-pointer relative">
+                <IoCloseSharp onClick={() => setPhoneOpen(false)} className='absolute text-2xl border right-5 top-5' />
                     <li className="text-orange-500 border-b-2 hover:text-orange-600 transition"><Link to="/">HOME</Link></li>
                     <li className="hover:text-orange-500 border-b-2 transition"><Link to="../About">ABOUT US</Link></li>
                     <li className="hover:text-orange-500 border-b-2 transition"><Link to="../Facility">FACILITIES</Link></li>

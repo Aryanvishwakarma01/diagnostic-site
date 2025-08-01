@@ -11,7 +11,7 @@ html, body{
     background-color: grey;
 } */
 
-@media (max-width: 430px) {
+@media (max-width: 630px) {
   .navbar {
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@ html, body{
     padding: 10px 20px;
   }
   .left_nav img{
-    width: 80px;
+    width: 100px;
   }
   .menu{
     display: block;
@@ -71,10 +71,7 @@ html, body{
     text-align: center;
     padding: 10px;
   }
-  .page2_right{
-    width: 100%;
-    height:120px;
-  }
+  
   .page2_left h1{
         font-size: 20px;
   }
@@ -112,6 +109,19 @@ html, body{
     to {
       transform: translateX(0%);
     }
+  }
+
+   @keyframes menu-slide-in {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  .animate-menu-slide-in {
+    animation: slide-in 0.5s ease-out;
   }
 
   .animate-slide-in {
