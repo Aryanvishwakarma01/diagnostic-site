@@ -8,7 +8,7 @@ import About from './About/About.jsx'
 import Facility from './Facility/Facilities.jsx'
 import ContactUs from './ContactUs/ContactUs.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
+import Appointment from './Appointment/Appointment.jsx'
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -40,6 +40,7 @@ const App = () => {
       element:  <>
         <Navbar />
         <ContactUs />
+      <Appointment />
         <Footer /></>
     }
   ])
