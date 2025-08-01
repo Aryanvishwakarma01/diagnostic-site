@@ -33,10 +33,7 @@ html, body{
   .facilities{
     padding: 30px 10px;
   }
-  #facilities{
-    flex-direction: column;
-    gap:20px;
-  }
+  
 
   .facility_card{
     height: 400px;
@@ -72,12 +69,6 @@ html, body{
     padding: 10px;
   }
   
-  .page2_left h1{
-        font-size: 20px;
-  }
-  .page2_left p{
-    font-size: 12px;
-  }
   #slider{
     padding: 10px 10px; 
     justify-content: center;
