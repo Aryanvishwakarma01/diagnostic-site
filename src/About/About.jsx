@@ -16,7 +16,7 @@ const About = () => {
   </div>
   <div className='w-[90%] sm:w-[50%]'>
     <h1 className='text-4xl font-bold'>
-      About <span className='text-orange-600'>Harsh Lab & Diagnostic Centre</span>
+      About <span className='text-orange-600'>Harsha Lab & Diagnostic Centre</span>
     </h1>
     <p className='text-gray-800 py-10 sm:py-5'>
       Harsha Lab & Diagnostic is a trusted name in medical diagnostics, committed to delivering accurate, timely, and affordable diagnostic solutions. Since our inception, we have focused on combining advanced technology with compassionate care to support patients and healthcare providers in making informed decisions.
