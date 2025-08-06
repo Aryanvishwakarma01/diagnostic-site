@@ -21,7 +21,7 @@ const About = () => {
     <p className='text-gray-800 py-10 sm:py-5'>
       Harsha Lab & Diagnostic is a trusted name in medical diagnostics, committed to delivering accurate, timely, and affordable diagnostic solutions. Since our inception, we have focused on combining advanced technology with compassionate care to support patients and healthcare providers in making informed decisions.
       <br />
-      At Harsh Diagnostic, we offer a comprehensive range of diagnostic services including pathology, radiology, imaging, and specialized tests – all under one roof. Our facility is equipped with state-of-the-art machines and backed by a team of experienced pathologists, radiologists, lab technicians, and support staff who are dedicated to upholding the highest standards of quality and precision.
+      At Harsha Diagnostic, we offer a comprehensive range of diagnostic services including pathology, radiology, imaging, and specialized tests – all under one roof. Our facility is equipped with state-of-the-art machines and backed by a team of experienced pathologists, radiologists, lab technicians, and support staff who are dedicated to upholding the highest standards of quality and precision.
       <br />
       We understand the critical role diagnostics play in healthcare, and that’s why we adhere strictly to industry protocols and maintain complete transparency in every report we deliver. Our goal is to make diagnostics more accessible and patient-friendly, without compromising on reliability.
       <br />
