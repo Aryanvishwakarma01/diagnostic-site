@@ -1,24 +1,21 @@
 import { useEffect, useState } from 'react';
-import img1 from '../images/img1.jpg';
-import img2 from '../images/img2.jpg';
-import img3 from '../images/img3.jpg';
 import { Link, NavLink } from 'react-router-dom';
 
 const slides = [
   {
-    image: img1,
+    image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573866/img1_afjdka.jpg",
     title: <>Electrocardiogram</>,
     description: "ECG records heart's electrical activity to detect various heart conditions.",
     bg: "bg-orange-400/90"
   },
   {
-    image: img2,
+    image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573866/img2_ouhadg.jpg",
     title: <>Blood Collection</>,
     description: "Drawing blood from veins to test, diagnose, or monitor health.",
     bg: "bg-green-400/90"
   },
   {
-    image: img3,
+    image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573868/img3_bvmza9.jpg",
     title: <>Blood Collection at Home</>,
     description: "Healthcare professional collects blood sample at home for medical testing.",
     bg: "bg-blue-400/90"

@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+
 function RightNav() {
   return (
     <div className='right_nav'>
-      <ul className=" list-none flex items-center gap-10 text-base font-medium text-black cursor-pointer">
-        <li className="transition">
+      <ul className=" list-none flex items-center gap-10 text-xl font-medium text-black cursor-pointer">
+        <li>
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "text-orange-500" : "text-black hover:text-orange-500"
+              isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
             }
           >
             HOME
@@ -16,32 +17,32 @@ function RightNav() {
         </li>
 
 
-        <li className="transition">
+        <li>
           <NavLink
             to="/facilities"
             className={({ isActive }) =>
-              isActive ? "text-orange-500" : "text-black hover:text-orange-500"
+              isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
             }
           >
             FACILITIES
           </NavLink>
         </li>
 
-        <li className="transition">
+        <li>
           <NavLink
             to="/contact-us"
             className={({ isActive }) =>
-              isActive ? "text-orange-500" : "text-black hover:text-orange-500"
+              isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
             }
           >
             CONTACT US
           </NavLink>
         </li>
-        <li className="transition">
+        <li>
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? "text-orange-500" : "text-black hover:text-orange-500"
+              isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
             }
           >
             ABOUT US

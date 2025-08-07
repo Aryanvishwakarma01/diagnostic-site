@@ -1,9 +1,8 @@
-import img1 from '../images/img1.jpg'
 const ContactUs = () => {
   return (
     <>
       <div className='relative flex items-center justify-center h-[300px] w-full mb-5'>
-        <img src={img1} alt="" className='absolute inset-0 z-0 h-full w-full object-cover' />
+        <img src="https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573866/img1_afjdka.jpg" alt="" className='absolute inset-0 z-0 h-full w-full object-cover' />
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
         <h1 className='absolute text-center z-20 font-bold text-6xl sm:text-8xl text-white'>CONTACT US</h1>
       </div>

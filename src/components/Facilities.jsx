@@ -1,16 +1,10 @@
 import React from 'react';
-import xray from '../images/xray.jpg';
-
-import ecg from '../images/ecg.jpg';
-import bloodsample from '../images/bloodsample.jpeg';
-import bloodcollection from '../images/bloodcollection.png';
-
 
 const Facilities = () => {
   const facilitiesArr = [
-    { image: ecg, name: "Electrocardiogram" },
-    {image: bloodsample, name: "Blood Collect From Home"},
-    {image: bloodcollection, name: "Blood Collection"}
+    { image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573867/ecg_sszl5v.jpg", name: "Electrocardiogram" },
+    {image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573866/bloodsample_lw9chz.jpg", name: "Blood Collect From Home"},
+    {image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573867/bloodcollection_qu9duw.png", name: "Blood Collection"}
   ];
 
   function reloadPage() {

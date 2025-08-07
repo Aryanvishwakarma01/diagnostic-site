@@ -1,5 +1,5 @@
 import React from 'react'
-import Ultrasound from '../images/Ultrasound.png';
+
 const Page2 = () => {
   return (
     <div className="page2 relative flex w-full p-15 justify-between items-center">
@@ -12,7 +12,7 @@ const Page2 = () => {
       </div>
     </div>
     <div className="page2_right w-3/5 sm:w-1/6  object-cover ">
-      <img src={Ultrasound} className="w-full h-full mt-5 m-auto" alt=""/>
+      <img src="https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573868/Ultrasound_km9s52.png" className="w-full h-full mt-5 m-auto" alt=""/>
     </div>
   </div>
   )

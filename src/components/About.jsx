@@ -1,19 +1,16 @@
 import React from 'react'
-import Navbar from './Navbar'
-// import ultrasound2 from '../components/ultrasound2.jpg'
-import ultrasound2 from '../images/ultrasound2.jpg'
-import aboutus from '../images/aboutus.jpg';
+
 const About = () => {
   return (
     <>
       <div className='relative flex items-center  justify-center h-[300px] w-full'>
-        <img src={ultrasound2} alt="" className='absolute inset-0 z-0 h-full w-full object-cover' />
+        <img src="https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573868/ultrasound2_qvyvgh.jpg" alt="" className='absolute inset-0 z-0 h-full w-full object-cover' />
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
         <h1 className='absolute text-center z-20 font-bold text-6xl sm:text-8xl text-white'>ABOUT US</h1>
       </div>
       <div className='flex flex-col sm:flex-row items-center justify-center gap-5 w-full px-5 py-8'>
   <div>
-    <img src={aboutus} className='h-[80%] hidden sm:block' alt="" />
+    <img src="https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573866/aboutus_pjgxj2.jpg" className='h-[80%] hidden sm:block' alt="" />
   </div>
   <div className='w-[90%] sm:w-[50%]'>
     <h1 className='text-4xl font-bold'>
