@@ -1,57 +1,28 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Slider from './components/Slider.jsx'
-import Page2 from './components/Page2.jsx'
-import Facilities from './components/Facilities.jsx'
-import Footer from './components/Footer.jsx'
-import About from './About/About.jsx'
-import Facility from './Facility/Facilities.jsx'
-import ContactUs from './ContactUs/ContactUs.jsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Appointment from './Appointment/Appointment.jsx'
+import FacilitiesPage from './pages/FacilitiesPage.jsx'
+import About from './components/About.jsx'
+import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import Layout from './pages/Layout.jsx'
+import ContactPage from './pages/ContactPage.jsx'
+
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <>
-        <Navbar />
-        <Slider />
-        <Page2 />
-        <Facilities />
-        <Footer /></>
-    },
-    {
-      path: "/About",
-      element:  <>
-        <Navbar />
-        <About />
-        <Footer /></>
-    },
-    {
-      path: "/Facility",
-      element:  <>
-        <Navbar />
-        <Facility />
-        <Facilities />
-        <Footer /></>
-    },
-    {
-      path: "/ContactUs",
-      element:  <>
-        <Navbar />
-        <ContactUs />
-      <Appointment />
-        <Footer /></>
-    }
-  ])
+  const router = createBrowserRouter(
+
+    createRoutesFromElements(
+      <Route path='/' element={<Layout />} >
+        <Route index element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/facilities' element={<FacilitiesPage />} />
+        <Route path='/contact-us' element={<ContactPage />} />
+      </Route>
+
+
+    )
+  )
   return (
     <>
       <RouterProvider router={router} />
-      {/* <Navbar />
-    <Slider />
-    <Page2 />
-    <Facilities />
-    <Footer /> */}
     </>
   )
 }

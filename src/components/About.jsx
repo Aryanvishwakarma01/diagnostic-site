@@ -1,7 +1,8 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import ultrasound2 from '../components/ultrasound2.jpg'
-import aboutus from '../components/aboutus.jpg'
+import Navbar from './Navbar'
+// import ultrasound2 from '../components/ultrasound2.jpg'
+import ultrasound2 from '../images/ultrasound2.jpg'
+import aboutus from '../images/aboutus.jpg';
 const About = () => {
   return (
     <>

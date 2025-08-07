@@ -1,4 +1,4 @@
-import logo from './logo.png';
+import logo from '../images/logo.png';
 import { Link, NavLink } from 'react-router-dom';
 import RightNav from './RightNav';
 import { IoIosMenu } from "react-icons/io";
@@ -46,7 +46,7 @@ function Navbar() {
 
         <li className="transition">
           <NavLink
-            to="/ContactUs"
+            to="/aryan"
             className={({ isActive }) =>
               isActive ? "text-orange-500" : "text-black hover:text-orange-500"
             }
@@ -56,7 +56,7 @@ function Navbar() {
         </li>
         <li className="transition">
           <NavLink
-            to="/About"
+            to="/about"
             className={({ isActive }) =>
               isActive ? "text-orange-500" : "text-black hover:text-orange-500"
             }

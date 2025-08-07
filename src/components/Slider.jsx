@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import img1 from './img1.jpg';
-import img2 from './img2.jpg';
-import img3 from './img3.jpg';
-import { Link } from 'react-router-dom';
+import img1 from '../images/img1.jpg';
+import img2 from '../images/img2.jpg';
+import img3 from '../images/img3.jpg';
+import { Link, NavLink } from 'react-router-dom';
 
 const slides = [
   {
@@ -53,7 +53,7 @@ function Slider() {
         <p className="text-2xl">{slide.description}</p>
         <div className="buttons flex gap-2 text-black">
           <button className="py-3 px-5 rounded-3xl bg-white/80 text-xl font-medium cursor-pointer hover:text-white hover:bg-black transition-ease duration-500">
-            <Link to="../ContactUs">Enquiry Now</Link>
+            <NavLink to="/Contact-Us">Enquiry Now</NavLink>
           </button>
           <button className="py-3 px-5 rounded-3xl bg-white/80 text-xl font-medium cursor-pointer hover:text-white hover:bg-black transition-ease duration-500">
             <a href="tel:9646548046">Call Now</a>

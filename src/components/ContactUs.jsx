@@ -1,5 +1,4 @@
-
-import img1 from '../components/img1.jpg'
+import img1 from '../images/img1.jpg'
 const ContactUs = () => {
   return (
     <>

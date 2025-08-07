@@ -1,7 +1,8 @@
 import React from 'react'
-import xray from '../components/xray.jpg'
+// import xray from '../components/xray.jpg'
+import xray from '../images/xray.jpg';
 
-const Facility = () => {
+const FacilitiesHeading = () => {
   return (
     <>
       <div className='relative flex items-center justify-center h-[300px] w-full'>
@@ -14,4 +15,4 @@ const Facility = () => {
   )
 }
 
-export default Facility
+export default FacilitiesHeading

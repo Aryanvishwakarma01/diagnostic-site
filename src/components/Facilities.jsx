@@ -1,24 +1,16 @@
 import React from 'react';
-import xray from './xray.jpg';
-// import ntscan from './ntscan.jpg';
-// import fetal from './fetal.png';
-import ecg from './ecg.jpg';
-import bloodsample from './bloodsample.jpeg';
-import bloodcollection from './bloodcollection.png'
-// import Ultrasound2 from './Ultrasound.jpg';
-// import colordoppler from './colordoppler.jpeg';
-// import ultrasound3d from './ultrasound3d.jpg';
+import xray from '../images/xray.jpg';
+
+import ecg from '../images/ecg.jpg';
+import bloodsample from '../images/bloodsample.jpeg';
+import bloodcollection from '../images/bloodcollection.png';
+
 
 const Facilities = () => {
   const facilitiesArr = [
-    // { image: ntscan, name: "NT Scan" },
-    // { image: xray, name: "Xray" },
     { image: ecg, name: "Electrocardiogram" },
     {image: bloodsample, name: "Blood Collect From Home"},
     {image: bloodcollection, name: "Blood Collection"}
-    // { image: colordoppler, name: "Colour Doppler" },
-    // { image: ultrasound3d, name: "3D/4D Ultrasound" },
-    // { image: Ultrasound2, name: "Ultrasound" },
   ];
 
   function reloadPage() {

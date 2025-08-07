@@ -1,5 +1,5 @@
 import React from 'react'
-import Ultrasound from './Ultrasound.png';
+import Ultrasound from '../images/Ultrasound.png';
 const Page2 = () => {
   return (
     <div className="page2 relative flex w-full p-15 justify-between items-center">

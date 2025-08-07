@@ -18,7 +18,7 @@ function RightNav() {
 
         <li className="transition">
           <NavLink
-            to="/Facility"
+            to="/facilities"
             className={({ isActive }) =>
               isActive ? "text-orange-500" : "text-black hover:text-orange-500"
             }
@@ -29,7 +29,7 @@ function RightNav() {
 
         <li className="transition">
           <NavLink
-            to="/ContactUs"
+            to="/contact-us"
             className={({ isActive }) =>
               isActive ? "text-orange-500" : "text-black hover:text-orange-500"
             }
@@ -39,7 +39,7 @@ function RightNav() {
         </li>
         <li className="transition">
           <NavLink
-            to="/About"
+            to="/about"
             className={({ isActive }) =>
               isActive ? "text-orange-500" : "text-black hover:text-orange-500"
             }
