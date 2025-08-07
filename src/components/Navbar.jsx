@@ -35,7 +35,7 @@ function Navbar() {
 
           <li>
             <NavLink
-              to="/Facility"
+              to="/Facilities"
               className={({ isActive }) =>
                 isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
               }
@@ -46,7 +46,7 @@ function Navbar() {
 
           <li>
             <NavLink
-              to="/aryan"
+              to="/contact-us"
               className={({ isActive }) =>
                 isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
               }

@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <>
-      <div className='relative flex items-center  justify-center h-[300px] w-full'>
+      <div className='relative flex items-center  justify-center h-[200px] sm:h-[300px] w-full'>
         <img src="https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573868/ultrasound2_qvyvgh.jpg" alt="" className='absolute inset-0 z-0 h-full w-full object-cover' />
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
         <h1 className='absolute text-center z-20 font-bold text-6xl sm:text-8xl text-white'>ABOUT US</h1>

@@ -47,7 +47,7 @@ function Slider() {
       <div id='left' className={`w-[30%] h-full flex items-center justify-center flex-col gap-6 text-center transition-opacity duration-300
         ${isFading ? "opacity-0" : "opacity-100"}`}>
         <h1 className="text-4xl font-bold text-wrap">{slide.title}</h1>
-        <p className="text-2xl">{slide.description}</p>
+        <p className="text-[20px] w-[80%] sm:w-full sm:text-2xl">{slide.description}</p>
         <div className="buttons flex gap-2 text-black">
           <button className="py-3 px-5 rounded-3xl bg-white/80 text-xl font-medium cursor-pointer hover:text-white hover:bg-black transition-ease duration-500">
             <NavLink to="/Contact-Us">Enquiry Now</NavLink>
