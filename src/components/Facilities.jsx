@@ -11,13 +11,13 @@ const Facilities = () => {
     location.reload(); // This reloads the current page
   }
   return (
-    <div className="facilities w-full bg-gray-200 p-15 flex flex-col gap-15">
+    <div className="facilities w-full bg-gray-200 px-[30px] py-[25px] sm:p-15 flex flex-col gap-8 sm:gap-15">
       <h1 className="text-4xl text-center font-bold">OUR <span className="text-orange-500">FACILITIES</span></h1>
       <div id="facilities" className="flex items-center justify-center flex-col gap-15 sm:flex-row sm:gap-10">
         {facilitiesArr.map((item, index) => (
-          <div key={index} className="facility_card h-[250px] w-[350px] bg-white rounded-xl overflow-hidden shadow-md mx-auto">
-            <img src={item.image} className="h-[85%] w-full object-cover" alt={item.name} />
-            <h1 className="text-center py-2 text-xl font-bold">{item.name}</h1>
+          <div key={index} className="facility_card h-[400px] sm:h-[250px] w-[300px] sm:w-[350px] bg-white rounded-xl overflow-hidden shadow-md mx-auto">
+            <img src={item.image} className="h-[92%] sm:h-[85%] w-full object-cover" alt={item.name} />
+            <h1 className="text-center py-2 text-[16px] sm:text-xl font-bold">{item.name}</h1>
           </div>
         ))}
       </div>

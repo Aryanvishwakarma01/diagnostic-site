@@ -41,10 +41,10 @@ function Slider() {
   const slide = slides[current];
 
   return (
-    <div id='slider' className={`w-full ${slide.bg} h-[500px] overflow-hidden flex items-center px-8 text-white relative`}>
+    <div id='slider' className={`w-full ${slide.bg} h-[500px] overflow-hidden flex items-center justify-center px-8 text-white relative`}>
       
       {/* Left Content */}
-      <div id='left' className={`w-[30%] h-full flex items-center justify-center flex-col gap-6 text-center transition-opacity duration-300
+      <div id='left' className={`w-full absolute z-10 sm:relative sm:w-[30%] h-full flex items-center justify-center flex-col gap-6 text-center transition-opacity duration-300
         ${isFading ? "opacity-0" : "opacity-100"}`}>
         <h1 className="text-4xl font-bold text-wrap">{slide.title}</h1>
         <p className="text-[20px] w-[80%] sm:w-full sm:text-2xl">{slide.description}</p>
@@ -59,12 +59,12 @@ function Slider() {
       </div>
 
       {/* Right Image Slide-in */}
-      <div id="right" className="relative left-20 right-0 h-full w-[70%] overflow-hidden flex items-center justify-center transition-opacity duration-500">
+      <div id="right" className="left-0 sm:left-20 right-0 h-full w-[100%] absolute  sm:relative z-9 sm:w-[70%] overflow-hidden flex items-center justify-center transition-opacity duration-500">
         <img
           key={current} // re-trigger animation on change
           src={slide.image}
           alt="slide"
-          className={`border-12 border-white rounded-l-[50%] w-full h-[130%] object-cover transform transition-transform duration-300 translate-x-0 animate-slide-in`}
+          className={`border-0 sm:border-12  sm:border-white sm:rounded-l-[50%] w-full h-[130%] filter brightness-50 sm:brightness-100 object-cover transform transition-transform duration-300 translate-x-0 animate-slide-in`}
         />
       </div>
     </div>

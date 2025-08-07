@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 function RightNav() {
   return (
-    <div className='right_nav'>
+    <div className='right_nav hidden sm:block'>
       <ul className=" list-none flex items-center gap-10 text-xl font-medium text-black cursor-pointer">
         <li>
           <NavLink
