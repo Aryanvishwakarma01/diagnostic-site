@@ -49,10 +49,10 @@ function Slider() {
         <h1 className="text-4xl font-bold text-wrap">{slide.title}</h1>
         <p className="text-[20px] w-[80%] sm:w-full sm:text-2xl">{slide.description}</p>
         <div className="buttons flex gap-2 text-black">
-          <button className="py-3 px-5 rounded-3xl bg-white/80 text-xl font-medium cursor-pointer hover:text-white hover:bg-black transition-ease duration-500">
+          <button className="py-3 px-5 rounded-3xl bg-white/80 sm:text-xl font-medium cursor-pointer hover:text-white hover:bg-black transition-ease duration-500">
             <NavLink to="/Contact-Us">Enquiry Now</NavLink>
           </button>
-          <button className="py-3 px-5 rounded-3xl bg-white/80 text-xl font-medium cursor-pointer hover:text-white hover:bg-black transition-ease duration-500">
+          <button className="py-3 px-5 rounded-3xl bg-white/80 sm:text-xl font-medium cursor-pointer hover:text-white hover:bg-black transition-ease duration-500">
             <a href="tel:9646548046">Call Now</a>
           </button>
         </div>

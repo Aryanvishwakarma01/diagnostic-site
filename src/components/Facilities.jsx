@@ -11,7 +11,7 @@ const Facilities = () => {
     location.reload(); // This reloads the current page
   }
   return (
-    <div className="facilities w-full bg-gray-100 p-15 flex flex-col gap-15">
+    <div className="facilities w-full bg-gray-200 p-15 flex flex-col gap-15">
       <h1 className="text-4xl text-center font-bold">OUR <span className="text-orange-500">FACILITIES</span></h1>
       <div id="facilities" className="flex items-center justify-center flex-col gap-15 sm:flex-row sm:gap-10">
         {facilitiesArr.map((item, index) => (
