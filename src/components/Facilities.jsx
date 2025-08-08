@@ -1,10 +1,10 @@
 import React from 'react';
-
+import { Link, NavLink } from 'react-router-dom'
 const Facilities = () => {
   const facilitiesArr = [
     { image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573867/ecg_sszl5v.jpg", name: "Electrocardiogram" },
-    {image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573866/bloodsample_lw9chz.jpg", name: "Blood Collect From Home"},
-    {image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573867/bloodcollection_qu9duw.png", name: "Blood Collection"}
+    { image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573866/bloodsample_lw9chz.jpg", name: "Blood Collect From Home" },
+    { image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573867/bloodcollection_qu9duw.png", name: "Blood Collection" }
   ];
 
   function reloadPage() {
@@ -23,9 +23,9 @@ const Facilities = () => {
       </div>
 
       <div className='flex items-center justify-center gap-5'>
-        <button onClick={reloadPage} className='border px-8 py-3 rounded-4xl bg-green-700 hover:bg-orange-500 transition duration-300 text-white text-[18px] font-bold cursor-pointer'>View More</button>
+        <button onClick={reloadPage} className='border px-8 py-3 rounded-4xl bg-green-700 hover:bg-red-500 transition duration-300 text-white text-[18px] font-bold cursor-pointer'><NavLink to="/contact-us">Book Appointment</NavLink></button>
         <button className='border px-8 py-3 rounded-4xl bg-green-700 hover:bg-orange-500 transition duration-300  text-white text-[18px] font-bold cursor-pointer'><a href="tel:9646548046"><i className="ri-phone-fill"></i> Call Now</a>
-</button>
+        </button>
       </div>
     </div>
   );
