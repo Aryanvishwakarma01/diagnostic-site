@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 function RightNav() {
   return (
     <div className='right_nav hidden sm:block'>
-      <ul className=" list-none flex items-center gap-10 text-xl font-medium text-black cursor-pointer">
+      <ul className=" list-none flex items-center gap-10 text-[20px] font-medium text-black cursor-pointer">
         <li>
           <NavLink
             to="/"
@@ -12,7 +12,7 @@ function RightNav() {
               isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
             }
           >
-            HOME
+            Home
           </NavLink>
         </li>
 
@@ -24,7 +24,7 @@ function RightNav() {
               isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
             }
           >
-            FACILITIES
+            Facilities
           </NavLink>
         </li>
 
@@ -35,7 +35,7 @@ function RightNav() {
               isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
             }
           >
-            CONTACT US
+            Contact Us
           </NavLink>
         </li>
         <li>
@@ -45,7 +45,7 @@ function RightNav() {
               isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
             }
           >
-            ABOUT US
+            About Us
           </NavLink>
         </li>
       </ul>

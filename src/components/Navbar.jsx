@@ -4,7 +4,7 @@ import { IoIosMenu } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
 import { useState } from 'react';
 import logo from '../assets/logo.png'
-
+import { FaCalendarAlt } from "react-icons/fa";
 
 function Navbar() {
   const [phoneOpen, setPhoneOpen] = useState(false)
@@ -16,7 +16,7 @@ function Navbar() {
 
       </div>
       {/* <li className="phone_no hover:bg-orange-500 bg-green-600 px-2 py-[4px] rounded text-white transition-all duration-400 block sm:hidden"><a href="tel:9646548046" className='text-[12px] font-bold'> +91-9646548046</a></li> */}
-      <li className="phone_no hover:bg-red-600 bg-red-500 px-2 py-[4px] rounded text-white transition-all duration-400 block sm:hidden"><NavLink to="/contact-us" className='text-[12px] font-bold'>Book Appointment</NavLink></li>
+      <li className="phone_no hover:bg-red-600 bg-red-500 px-3 py-[4px] rounded-2xl text-white transition-all duration-400 block sm:hidden"><NavLink to="/contact-us" className='text-[12px] font-bold flex items-center gap-1'><FaCalendarAlt className='inline' />Book Appointment</NavLink></li>
       <IoIosMenu onClick={() => setPhoneOpen(prev => !prev)} className='menu_btn text-4xl cursor-pointer block sm:hidden' />
       <RightNav />
 
