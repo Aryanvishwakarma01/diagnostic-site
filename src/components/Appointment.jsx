@@ -12,19 +12,22 @@ const Appointment = () => {
         message: ""
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false); // NEW STATE
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setIsSubmitting(true); // Start submitting
 
         emailjs
             .send(
-                "service_yu91llc", // Your Service ID
-                "template_bje4e1t", // Your Template ID
+                "service_yu91llc",
+                "template_bje4e1t",
                 formData,
-                "WkZKLRKLvHwSEVP7F" // Your Public Key
+                "WkZKLRKLvHwSEVP7F"
             )
             .then(
                 () => {
@@ -38,10 +41,12 @@ const Appointment = () => {
                         email: "",
                         message: ""
                     });
+                    setIsSubmitting(false); // Reset button text
                 },
                 (error) => {
                     console.error(error.text);
                     alert("Failed to send appointment.");
+                    setIsSubmitting(false); // Reset even if failed
                 }
             );
     };
@@ -164,8 +169,9 @@ const Appointment = () => {
                         <input
                             type='submit'
                             id='submit'
-                            className='border px-8 transition-all duration-300 py-2 sm:text-2xl rounded-4xl bg-green-800 text-white font-semibold hover:bg-orange-500 cursor-pointer'
-                            value="Submit"
+                            disabled={isSubmitting} // disable while submitting
+                            className='border px-8 transition-all duration-300 py-2 sm:text-2xl rounded-4xl bg-green-800 text-white font-semibold hover:bg-orange-500 cursor-pointer disabled:opacity-70'
+                            value={isSubmitting ? "Submitting..." : "Submit"} // dynamic text
                         />
                     </div>
                 </form>
