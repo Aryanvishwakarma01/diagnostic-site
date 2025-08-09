@@ -39,6 +39,8 @@ const Appointment = () => {
                         gender: "",
                         phone: "",
                         ptEmail: "",
+                        appointmentDate: "",
+                        ptAddress: "",
                         message: ""
                     });
                     setIsSubmitting(false); // Reset button text
@@ -58,7 +60,7 @@ const Appointment = () => {
             </h1>
             <div className='w-[90%] mb-5 gap-2 shadow-[0_0_10px_rgba(0,0,0,0.3)] p-6 bg-white rounded-lg'>
                 <form onSubmit={handleSubmit} className='flex w-full flex-col gap-5 justify-center text-[16px] sm:text-xl'>
-                    
+
                     {/* Test Name */}
                     <div>
                         <label>Test Name</label>
@@ -152,6 +154,35 @@ const Appointment = () => {
                         </div>
                     </div>
 
+                    {/* Appointment Date */}
+                    <div>
+                        <label>Appointment Date</label>
+                        <input
+                            type="date"
+                            name="appointmentDate"
+                            value={formData.appointmentDate}
+                            onChange={handleChange}
+                            className='w-full rounded border mt-2 p-2 text-gray-500 placeholder:text-[14px] placeholder:sm:text-xl'
+                            required
+                        />
+                    </div>
+
+
+                    {/* Patient Name */}
+                    <div>
+                        <label>Address</label>
+                        <input
+                            type="text"
+                            name="ptAddress"
+                            placeholder='Enter patient address'
+                            maxLength={50}
+                            value={formData.ptAddress}
+                            onChange={handleChange}
+                            className='w-full rounded border mt-2 p-2 placeholder:text-[14px] placeholder:sm:text-xl'
+                            required
+                        />
+                    </div>
+
                     {/* Message */}
                     <div>
                         <label>Your Message</label>
@@ -159,10 +190,18 @@ const Appointment = () => {
                             name="message"
                             placeholder='Enter your message'
                             value={formData.message}
-                            onChange={handleChange}
+                            onChange={(e) =>
+                                handleChange({
+                                    target: {
+                                        name: "message",
+                                        value: e.target.value.trim() === "" ? "No additional Information" : e.target.value
+                                    }
+                                })
+                            }
                             className='w-full rounded border mt-2 p-2 placeholder:text-[14px] placeholder:sm:text-xl'
                         />
                     </div>
+
 
                     {/* Submit */}
                     <div className='flex items-center justify-center'>
