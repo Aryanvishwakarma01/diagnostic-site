@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Appointment = () => {
     const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ const Appointment = () => {
         email: "",
         message: ""
     });
+
+
 
     const [isSubmitting, setIsSubmitting] = useState(false); // NEW STATE
 
@@ -31,7 +34,8 @@ const Appointment = () => {
             )
             .then(
                 () => {
-                    alert("Appointment sent successfully!");
+                    // alert("Appointment sent successfully!");
+                    toast.success("Appointment sent successfully!");
                     setFormData({
                         testName: "",
                         patientName: "",
@@ -47,14 +51,14 @@ const Appointment = () => {
                 },
                 (error) => {
                     console.error(error.text);
-                    alert("Failed to send appointment.");
+                    toast("Failed to send appointment.");
                     setIsSubmitting(false); // Reset even if failed
                 }
             );
     };
 
     return (
-        <div className='w-full flex items-center justify-center flex-col gap-10 py-10'>
+        <div className='w-full flex items-center justify-center flex-col gap-10 pt-10'>
             <h1 className='text-2xl sm:text-4xl font-bold tracking-wide text-center'>
                 APPOINTMENT <span className='text-orange-500'>FORM</span>
             </h1>
@@ -215,7 +219,9 @@ const Appointment = () => {
                     </div>
                 </form>
             </div>
+            <ToastContainer />
         </div>
+
     );
 };
 

@@ -48,6 +48,16 @@ function RightNav() {
             About Us
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/book-appointment"
+            className={({ isActive }) =>
+              isActive ? "text-white bg-red-600 transition duration-300 p-2" : "text-white bg-red-500 hover:bg-red-600 transition duration-300 p-2"}
+
+          >
+            Book Appointment
+          </NavLink>
+        </li>
       </ul>
     </div>
   )

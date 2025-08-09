@@ -5,6 +5,7 @@ import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterPro
 import Home from './pages/Home.jsx'
 import Layout from './pages/Layout.jsx'
 import ContactPage from './pages/ContactPage.jsx'
+import AppointmentPage from './pages/AppointmentPage.jsx'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -15,6 +16,7 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/facilities' element={<FacilitiesPage />} />
         <Route path='/contact-us' element={<ContactPage />} />
+        <Route path='/book-appointment' element={<AppointmentPage />} />
       </Route>
 
 

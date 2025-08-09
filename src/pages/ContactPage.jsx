@@ -6,7 +6,7 @@ function ContactPage() {
   return (
     <>
     <ContactUs />
-    <Appointment />
+    {/* <Appointment /> */}
     </>
   )
 }

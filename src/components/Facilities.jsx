@@ -24,7 +24,7 @@ const Facilities = () => {
       </div>
 
       <div className='flex items-center justify-center gap-5'>
-        <button className='border py-3 sm:py-4 px-6 sm:px-10 text-[12px] sm:text-[18px] rounded-4xl bg-red-500 hover:bg-red-700 border-none transition duration-300 text-white font-bold cursor-pointer'><NavLink className="flex items-center gap-2" to="/contact-us"><FaCalendarAlt className='inline' />Book Appointment</NavLink></button>
+        <button className='border py-3 sm:py-4 px-6 sm:px-10 text-[12px] sm:text-[18px] rounded-4xl bg-red-500 hover:bg-red-700 border-none transition duration-300 text-white font-bold cursor-pointer'><NavLink className="flex items-center gap-2" to="/book-appointment"><FaCalendarAlt className='inline' />Book Appointment</NavLink></button>
         <button className='border py-3 sm:py-4 px-6 sm:px-10 text-[12px] sm:text-[18px] rounded-4xl bg-green-700 hover:bg-orange-500 transition duration-300  text-white font-bold cursor-pointer'><a href="tel:9646548046"><i className="ri-phone-fill"></i> Call Now</a>
         </button>
       </div>
