@@ -24,10 +24,10 @@ const Appointment = () => {
 
         emailjs
             .send(
-                "service_yu91llc",
-                "template_bje4e1t",
+                "service_hpexoqa",
+                "template_m7m88xd",
                 formData,
-                "WkZKLRKLvHwSEVP7F"
+                "JYa2rapV2h5sKJbQY"
             )
             .then(
                 () => {
@@ -38,7 +38,7 @@ const Appointment = () => {
                         age: "",
                         gender: "",
                         phone: "",
-                        email: "",
+                        ptEmail: "",
                         message: ""
                     });
                     setIsSubmitting(false); // Reset button text
@@ -141,10 +141,10 @@ const Appointment = () => {
                             <label>Email</label>
                             <input
                                 type="email"
-                                name="email"
+                                name="ptEmail"
                                 placeholder='Enter patient email'
                                 maxLength={30}
-                                value={formData.email}
+                                value={formData.ptEmail}
                                 onChange={handleChange}
                                 className='rounded border mt-2 p-2 placeholder:text-[14px] placeholder:sm:text-xl'
                                 required
