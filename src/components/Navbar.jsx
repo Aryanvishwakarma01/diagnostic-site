@@ -3,7 +3,6 @@ import RightNav from './RightNav';
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
 import { useState } from 'react';
-import logo from '../assets/logo.png'
 import { FaCalendarAlt } from "react-icons/fa";
 
 function Navbar() {
@@ -12,11 +11,27 @@ function Navbar() {
   return (
     <div className='navbar w-full flex items-center justify-between px-[20px] sm:px-20 py-[10px] sm:py-0 relative'>
       <div className="left_nav">
-        <img src={logo} alt="" className="w-[100px] sm:w-[250px]" />
+        <img src="/logo.png" alt="" className="w-[100px] sm:w-[250px]" />
 
       </div>
       {/* <li className="phone_no hover:bg-orange-500 bg-green-600 px-2 py-[4px] rounded text-white transition-all duration-400 block sm:hidden"><a href="tel:9646548046" className='text-[12px] font-bold'> +91-9646548046</a></li> */}
-      <li className="phone_no hover:bg-red-600 bg-red-500 px-3 py-[4px] rounded-2xl text-white transition-all duration-400 block sm:hidden"><NavLink to="/book-appointment" className='text-[12px] font-bold flex items-center gap-1'><FaCalendarAlt className='inline' />Book Appointment</NavLink></li>
+
+      <li className="phone_no text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 px-3 py-[4px] rounded-2xl sm:hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"><NavLink to="/book-appointment" className='text-[12px] font-bold flex items-center gap-1'><i className="ri-calendar-check-fill inline"></i>Book Appointment</NavLink></li>
+
+      {/* <li className="ml-4">
+                <NavLink
+                  to="/book-appointment"
+                  className={({ isActive }) =>
+                    isActive 
+                      ? "text-white bg-red-600 px-6 py-3 rounded-full font-bold shadow-lg transform scale-105" 
+                      : "text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                  }
+                >
+                  <i className="ri-calendar-check-fill"></i>
+                  Book Appointment
+                </NavLink>
+              </li> */}
+
       <IoIosMenu onClick={() => setPhoneOpen(prev => !prev)} className='menu_btn text-4xl cursor-pointer block sm:hidden' />
       <RightNav />
 

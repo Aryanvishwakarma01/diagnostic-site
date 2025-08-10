@@ -1,24 +1,45 @@
-import ContactHeading from "./ContactHeading"
+import React from 'react';
+import ContactHeading from './ContactHeading'
 
 const ContactUs = () => {
   return (
     <>
       <ContactHeading />
-      <div className='w-full flex flex-col gap-5 py-10'>
-        {/* <h1 className='text-center text-4xl font-bold'>CONTACT <span className='text-orange-500'>US</span></h1> */}
-        <div className='flex flex-col sm:flex-row items-center justify-evenly gap-10 sm:gap-5'>
-          <div className='w-[60%] sm:w-[20%] h-[120px] sm:h-[180px] flex flex-col items-center justify-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.3)] p-6 bg-white rounded-lg'>
-            <i className="ri-map-pin-fill text-2xl sm:text-4xl"></i>
-            <h1 className='text-xl sm:text-2xl font-semibold'>Location here</h1>
+      <div className='w-full bg-gradient-to-br from-blue-50 via-gray-50 to-orange-50 py-16 px-8'>
+        <div className='flex flex-col sm:flex-row items-center justify-center gap-10 max-w-6xl mx-auto'>
+
+          {/* Location Card */}
+          <div className='group w-[280px] h-[200px] flex flex-col items-center justify-center gap-4 shadow-lg hover:shadow-2xl p-8 bg-white rounded-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100'>
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <i className="ri-map-pin-fill text-3xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300"></i>
+            </div>
+            <h1 className='text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 text-center leading-tight'>
+              Location Here
+            </h1>
           </div>
-          <div className='w-[60%] sm:w-[20%] h-[120px] sm:h-[180px] flex flex-col items-center justify-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.3)] p-6 bg-white rounded-lg'>
-            <i className="ri-phone-fill text-2xl sm:text-4xl"></i>
-            <h1 className='text-xl sm:text-2xl font-semibold hover:text-orange-500'><a href="tel:9646548046"> +91-9646548046</a></h1>
+
+          {/* Phone Card */}
+          <div className='group w-[280px] h-[200px] flex flex-col items-center justify-center gap-4 shadow-lg hover:shadow-2xl p-8 bg-white rounded-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100'>
+            <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <i className="ri-phone-fill text-3xl text-green-600 group-hover:text-green-700 group-hover:rotate-12 transition-all duration-300"></i>
+            </div>
+            <h1 className='text-lg font-bold text-gray-800 group-hover:text-green-600 transition-colors duration-300 text-center leading-tight'>
+              <a href="tel:9646548046" className="text-inherit no-underline hover:text-green-600">
+                +91-9646548046
+              </a>
+            </h1>
           </div>
-          <div className='w-[60%] sm:w-[20%] h-[120px] sm:h-[180px] flex flex-col items-center justify-center gap-2 shadow-[0_0_10px_rgba(0,0,0,0.3)] p-6 bg-white rounded-lg'>
-            <i className="ri-alarm-fill text-2xl sm:text-4xl"></i>
-            <h1 className='text-xl sm:text-2xl font-semibold'>Timings Here</h1>
+
+          {/* Timings Card */}
+          <div className='group w-[280px] h-[200px] flex flex-col items-center justify-center gap-4 shadow-lg hover:shadow-2xl p-8 bg-white rounded-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100'>
+            <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <i className="ri-alarm-fill text-3xl text-orange-600 group-hover:text-orange-700 transition-colors duration-300"></i>
+            </div>
+            <h1 className='text-xl font-bold text-gray-800 group-hover:text-orange-600 transition-colors duration-300 text-center leading-tight'>
+              Timings Here
+            </h1>
           </div>
+
         </div>
       </div>
     </>

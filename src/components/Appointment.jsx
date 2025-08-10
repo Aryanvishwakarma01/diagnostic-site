@@ -13,8 +13,6 @@ const Appointment = () => {
         message: ""
     });
 
-
-
     const [isSubmitting, setIsSubmitting] = useState(false); // NEW STATE
 
     const handleChange = (e) => {
@@ -58,170 +56,224 @@ const Appointment = () => {
     };
 
     return (
-        <div className='w-full flex items-center justify-center flex-col gap-10 pt-10'>
-            <h1 className='text-2xl sm:text-4xl font-bold tracking-wide text-center'>
-                APPOINTMENT <span className='text-orange-500'>FORM</span>
-            </h1>
-            <div className='w-[90%] mb-5 gap-2 shadow-[0_0_10px_rgba(0,0,0,0.3)] p-6 bg-white rounded-lg'>
-                <form onSubmit={handleSubmit} className='flex w-full flex-col gap-5 justify-center text-[16px] sm:text-xl'>
+        <div className='w-full bg-gradient-to-br from-blue-50 via-white to-green-50 py-16 px-8'>
+            <div className='max-w-4xl mx-auto'>
+                {/* Header */}
+                <div className='text-center mb-12'>
+                    <h1 className='text-3xl sm:text-4xl font-bold tracking-wide text-gray-800 mb-4'>
+                        APPOINTMENT <span className='text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500'>FORM</span>
+                    </h1>
+                    <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
+                    <p className="text-gray-600 mt-4 text-lg">Schedule your medical appointment with us</p>
+                </div>
 
-                    {/* Test Name */}
-                    <div>
-                        <label>Test Name</label>
-                        <select
-                            name="testName"
-                            value={formData.testName}
-                            onChange={handleChange}
-                            required
-                            className='border w-full rounded mt-2 p-2 text-gray-500 text-sm sm:text-xl'
-                        >
-                            <option value="">Select Test</option>
-                            <option value="Electrocardiogram">Electrocardiogram</option>
-                            <option value="Blood Collection">Blood Collection</option>
-                            <option value="Blood Collection at Home">Blood Collection at Home</option>
-                        </select>
+                {/* Form Container */}
+                <div className='bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden'>
+                    <div className='bg-gradient-to-r from-blue-600 to-green-600 px-6  py-3'>
+                        <h2 className='text-white text-xl font-semibold flex items-center gap-2'>
+                            <i className="ri-calendar-check-fill text-2xl"></i>
+                            Patient Information
+                        </h2>
                     </div>
 
-                    {/* Patient Name */}
-                    <div>
-                        <label>Patient Name</label>
-                        <input
-                            type="text"
-                            name="patientName"
-                            placeholder='Enter patient name'
-                            maxLength={20}
-                            value={formData.patientName}
-                            onChange={handleChange}
-                            className='w-full rounded border mt-2 p-2 placeholder:text-[14px] placeholder:sm:text-xl'
-                            required
-                        />
-                    </div>
+                    <div className='p-8'>
+                        <div className='space-y-8'>
 
-                    {/* Age & Phone */}
-                    <div className='flex items-center justify-between'>
-                        <div className='flex flex-col w-[48%]'>
-                            <label>Age</label>
-                            <input
-                                type="text"
-                                name="age"
-                                placeholder='Enter patient age'
-                                value={formData.age}
-                                onChange={handleChange}
-                                className='rounded border mt-2 p-2 placeholder:text-[14px] placeholder:sm:text-xl'
-                                required
-                            />
-                        </div>
-                        <div className='flex flex-col w-[48%]'>
-                            <label>Phone No.</label>
-                            <input
-                                type="text"
-                                name="phone"
-                                placeholder='Enter patient phone'
-                                maxLength={10}
-                                value={formData.phone}
-                                onChange={handleChange}
-                                className='rounded border mt-2 p-2 placeholder:text-[14px] placeholder:sm:text-xl'
-                                required
-                            />
-                        </div>
-                    </div>
+                            {/* Test Name */}
+                            <div className='space-y-2'>
+                                <label className='text-gray-700 font-semibold flex items-center gap-2'>
+                                    <i className="ri-stethoscope-fill text-blue-600"></i>
+                                    Test Name
+                                </label>
+                                <select
+                                    name="testName"
+                                    value={formData.testName}
+                                    onChange={handleChange}
+                                    required
+                                    className='w-full rounded-lg border-2 border-gray-200 p-4 text-gray-700 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white'
+                                >
+                                    <option value="">Select Test</option>
+                                    <option value="Electrocardiogram">Electrocardiogram</option>
+                                    <option value="Blood Collection">Blood Collection</option>
+                                    <option value="Blood Collection at Home">Blood Collection at Home</option>
+                                </select>
+                            </div>
 
-                    {/* Gender & Email */}
-                    <div className='flex items-center justify-between'>
-                        <div className='flex flex-col w-[48%]'>
-                            <label>Gender</label>
-                            <select
-                                name="gender"
-                                value={formData.gender}
-                                onChange={handleChange}
-                                required
-                                className='border p-2 mt-2 rounded text-gray-500 text-sm sm:text-xl'
-                            >
-                                <option value="">Select Gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Transgender">Transgender</option>
-                            </select>
-                        </div>
-                        <div className='flex flex-col w-[48%]'>
-                            <label>Email</label>
-                            <input
-                                type="email"
-                                name="ptEmail"
-                                placeholder='Enter patient email'
-                                maxLength={30}
-                                value={formData.ptEmail}
-                                onChange={handleChange}
-                                className='rounded border mt-2 p-2 placeholder:text-[14px] placeholder:sm:text-xl'
-                                required
-                            />
-                        </div>
-                    </div>
+                            {/* Patient Name */}
+                            <div className='space-y-2'>
+                                <label className='text-gray-700 font-semibold flex items-center gap-2'>
+                                    <i className="ri-user-fill text-green-600"></i>
+                                    Patient Name
+                                </label>
+                                <input
+                                    type="text"
+                                    name="patientName"
+                                    placeholder='Enter patient name'
+                                    maxLength={20}
+                                    value={formData.patientName}
+                                    onChange={handleChange}
+                                    className='w-full rounded-lg border-2 border-gray-200 p-4 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white'
+                                    required
+                                />
+                            </div>
 
-                    {/* Appointment Date */}
-                    <div>
-                        <label>Appointment Date</label>
-                        <input
-                            type="date"
-                            name="appointmentDate"
-                            value={formData.appointmentDate}
-                            onChange={handleChange}
-                            className='w-full rounded border mt-2 p-2 text-gray-500 placeholder:text-[14px] placeholder:sm:text-xl'
-                            required
-                        />
-                    </div>
+                            {/* Age & Phone */}
+                            <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+                                <div className='space-y-2'>
+                                    <label className='text-gray-700 font-semibold flex items-center gap-2'>
+                                        <i className="ri-calendar-fill text-purple-600"></i>
+                                        Age
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="age"
+                                        placeholder='Enter patient age'
+                                        value={formData.age}
+                                        onChange={handleChange}
+                                        className='w-full rounded-lg border-2 border-gray-200 p-4 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white'
+                                        required
+                                    />
+                                </div>
+                                <div className='space-y-2'>
+                                    <label className='text-gray-700 font-semibold flex items-center gap-2'>
+                                        <i className="ri-phone-fill text-green-600"></i>
+                                        Phone No.
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="phone"
+                                        placeholder='Enter patient phone'
+                                        maxLength={10}
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        className='w-full rounded-lg border-2 border-gray-200 p-4 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white'
+                                        required
+                                    />
+                                </div>
+                            </div>
 
+                            {/* Gender & Email */}
+                            <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+                                <div className='space-y-2'>
+                                    <label className='text-gray-700 font-semibold flex items-center gap-2'>
+                                        <i className="ri-user-line text-pink-600"></i>
+                                        Gender
+                                    </label>
+                                    <select
+                                        name="gender"
+                                        value={formData.gender}
+                                        onChange={handleChange}
+                                        required
+                                        className='w-full rounded-lg border-2 border-gray-200 p-4 text-gray-700 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white'
+                                    >
+                                        <option value="">Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Transgender">Transgender</option>
+                                    </select>
+                                </div>
+                                <div className='space-y-2'>
+                                    <label className='text-gray-700 font-semibold flex items-center gap-2'>
+                                        <i className="ri-mail-fill text-blue-600"></i>
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        name="ptEmail"
+                                        placeholder='Enter patient email'
+                                        maxLength={30}
+                                        value={formData.ptEmail}
+                                        onChange={handleChange}
+                                        className='w-full rounded-lg border-2 border-gray-200 p-4 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white'
+                                        required
+                                    />
+                                </div>
+                            </div>
 
-                    {/* Patient Name */}
-                    <div>
-                        <label>Address</label>
-                        <input
-                            type="text"
-                            name="ptAddress"
-                            placeholder='Enter patient address'
-                            maxLength={50}
-                            value={formData.ptAddress}
-                            onChange={handleChange}
-                            className='w-full rounded border mt-2 p-2 placeholder:text-[14px] placeholder:sm:text-xl'
-                            required
-                        />
-                    </div>
+                            {/* Appointment Date */}
+                            <div className='space-y-2'>
+                                <label className='text-gray-700 font-semibold flex items-center gap-2'>
+                                    <i className="ri-calendar-2-fill text-orange-600"></i>
+                                    Appointment Date
+                                </label>
+                                <input
+                                    type="date"
+                                    name="appointmentDate"
+                                    value={formData.appointmentDate}
+                                    onChange={handleChange}
+                                    className='w-full rounded-lg border-2 border-gray-200 p-4 text-gray-700 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white'
+                                    required
+                                />
+                            </div>
 
-                    {/* Message */}
-                    <div>
-                        <label>Your Message</label>
-                        <textarea
-                            name="message"
-                            placeholder='Enter your message'
-                            value={formData.message}
-                            onChange={(e) =>
-                                handleChange({
-                                    target: {
-                                        name: "message",
-                                        value: e.target.value.trim() === "" ? "No additional Information" : e.target.value
+                            {/* Address */}
+                            <div className='space-y-2'>
+                                <label className='text-gray-700 font-semibold flex items-center gap-2'>
+                                    <i className="ri-map-pin-fill text-red-600"></i>
+                                    Address
+                                </label>
+                                <input
+                                    type="text"
+                                    name="ptAddress"
+                                    placeholder='Enter patient address'
+                                    maxLength={50}
+                                    value={formData.ptAddress}
+                                    onChange={handleChange}
+                                    className='w-full rounded-lg border-2 border-gray-200 p-4 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white'
+                                    required
+                                />
+                            </div>
+
+                            {/* Message */}
+                            <div className='space-y-2'>
+                                <label className='text-gray-700 font-semibold flex items-center gap-2'>
+                                    <i className="ri-message-3-fill text-indigo-600"></i>
+                                    Your Message
+                                </label>
+                                <textarea
+                                    name="message"
+                                    placeholder='Enter your message'
+                                    value={formData.message}
+                                    onChange={(e) =>
+                                        handleChange({
+                                            target: {
+                                                name: "message",
+                                                value: e.target.value.trim() === "" ? "No additional Information" : e.target.value
+                                            }
+                                        })
                                     }
-                                })
-                            }
-                            className='w-full rounded border mt-2 p-2 placeholder:text-[14px] placeholder:sm:text-xl'
-                        />
-                    </div>
+                                    rows="4"
+                                    className='w-full rounded-lg border-2 border-gray-200 p-4 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white resize-none'
+                                />
+                            </div>
 
+                            {/* Submit Button */}
+                            <div className='flex justify-center pt-6'>
+                                <button
+                                    onClick={handleSubmit}
+                                    disabled={isSubmitting}
+                                    className='group bg-gradient-to-r from-green-600 to-green-700 hover:from-orange-500 hover:to-red-500 text-white font-bold py-4 px-8 rounded-full text-sm sm:text-[16px] shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center gap-3'
+                                >
+                                    {isSubmitting ? (
+                                        <>
+                                            <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
+                                            Submitting...
+                                        </>
+                                    ) : (
+                                        <>
+                                            <i className="ri-send-plane-fill group-hover:translate-x-1 transition-transform duration-300"></i>
+                                            Submit Appointment
+                                        </>
+                                    )}
+                                </button>
+                            </div>
 
-                    {/* Submit */}
-                    <div className='flex items-center justify-center'>
-                        <input
-                            type='submit'
-                            id='submit'
-                            disabled={isSubmitting} // disable while submitting
-                            className='border px-8 transition-all duration-300 py-2 sm:text-2xl rounded-4xl bg-green-800 text-white font-semibold hover:bg-orange-500 cursor-pointer disabled:opacity-70'
-                            value={isSubmitting ? "Submitting..." : "Submit"} // dynamic text
-                        />
+                        </div>
                     </div>
-                </form>
+                </div>
             </div>
             <ToastContainer />
         </div>
-
     );
 };
 
