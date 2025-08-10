@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Page2 = () => {
   return (
@@ -24,10 +25,10 @@ const Page2 = () => {
         {/* Buttons */}
         <div className="page2_buttons flex items-center justify-center sm:justify-start gap-4 flex-wrap">
           <button className='group bg-orange-600 hover:bg-orange-700 text-white py-3 px-6 rounded-full font-semibold text-[12px] sm:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border-none cursor-pointer'>
-          <a href="tel:9646548046" className="flex items-center gap-2 text-white no-underline">
+          <NavLink to="/about" className="flex items-center gap-2 text-white no-underline">
             <i className="ri-book-open-fill group-hover:scale-110 transition-transform duration-300"></i>
             <span>Read More</span>
-          </a>
+          </NavLink>
         </button>
           <button className='group bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-full font-semibold text-[12px] sm:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border-none cursor-pointer'>
           <a href="tel:9646548046" className="flex items-center gap-2 text-white no-underline">

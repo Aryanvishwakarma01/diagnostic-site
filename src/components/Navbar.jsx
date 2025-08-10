@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <div className='navbar w-full flex items-center justify-between px-[20px] sm:px-20 py-[10px] sm:py-0 relative'>
       <div className="left_nav">
-        <img src="https://res.cloudinary.com/dfnbm55zk/image/upload/v1754675896/logo-removebg-preview_gdvu28.png" alt="" className="w-[100px] sm:w-[250px]" />
+        <img src="/logo.png" alt="" className="w-[100px] sm:w-[250px]" />
 
       </div>
 
