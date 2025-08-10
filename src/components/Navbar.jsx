@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <div className='navbar w-full flex items-center justify-between px-[20px] sm:px-20 py-[10px] sm:py-0 relative'>
       <div className="left_nav">
-        <img src="/logo.png" alt="" className="w-[100px] sm:w-[250px]" />
+        <img src="https://res.cloudinary.com/dfnbm55zk/image/upload/v1754675896/logo-removebg-preview_gdvu28.png" alt="" className="w-[100px] sm:w-[250px]" />
 
       </div>
       {/* <li className="phone_no hover:bg-orange-500 bg-green-600 px-2 py-[4px] rounded text-white transition-all duration-400 block sm:hidden"><a href="tel:9646548046" className='text-[12px] font-bold'> +91-9646548046</a></li> */}
