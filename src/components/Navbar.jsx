@@ -14,76 +14,61 @@ function Navbar() {
         <img src="https://res.cloudinary.com/dfnbm55zk/image/upload/v1754675896/logo-removebg-preview_gdvu28.png" alt="" className="w-[100px] sm:w-[250px]" />
 
       </div>
-      {/* <li className="phone_no hover:bg-orange-500 bg-green-600 px-2 py-[4px] rounded text-white transition-all duration-400 block sm:hidden"><a href="tel:9646548046" className='text-[12px] font-bold'> +91-9646548046</a></li> */}
 
       <li className="phone_no text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 px-3 py-[4px] rounded-2xl sm:hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"><NavLink to="/book-appointment" className='text-[12px] font-bold flex items-center gap-1'><i className="ri-calendar-check-fill inline"></i>Book Appointment</NavLink></li>
-
-      {/* <li className="ml-4">
-                <NavLink
-                  to="/book-appointment"
-                  className={({ isActive }) =>
-                    isActive 
-                      ? "text-white bg-red-600 px-6 py-3 rounded-full font-bold shadow-lg transform scale-105" 
-                      : "text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
-                  }
-                >
-                  <i className="ri-calendar-check-fill"></i>
-                  Book Appointment
-                </NavLink>
-              </li> */}
 
       <IoIosMenu onClick={() => setPhoneOpen(prev => !prev)} className='menu_btn text-4xl cursor-pointer block sm:hidden' />
       <RightNav />
 
       <div className={`fixed w-full top-0 h-screen -left-[100%] z-50  bg-black/50 transition-all duration-300 ${phoneOpen && "left-0"}`}>
-        <ul className="phone_menu z-51 list-none bg-white w-[60%] h-screen flex flex-col items-start px-5 py-15 gap-5 text-base font-medium text-black cursor-pointer relative">
-          <IoCloseSharp onClick={() => setPhoneOpen(false)} className='absolute text-2xl border right-5 top-5' />
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
-              }
-            >
-              HOME
-            </NavLink>
-          </li>
-
-
-          <li>
-            <NavLink
-              to="/Facilities"
-              className={({ isActive }) =>
-                isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
-              }
-            >
-              FACILITIES
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="/contact-us"
-              className={({ isActive }) =>
-                isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
-              }
-            >
-              CONTACT US
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
-              }
-            >
-              ABOUT US
-            </NavLink>
-          </li>
-
-        </ul>
-      </div>
+  <ul className="phone_menu z-51 list-none bg-white w-[60%] h-screen flex flex-col items-start px-5 py-15 gap-5 text-base font-medium text-black cursor-pointer relative">
+    <IoCloseSharp onClick={() => setPhoneOpen(false)} className='absolute text-2xl border right-5 top-5' />
+    
+    <li onClick={() => setPhoneOpen(false)}>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
+        }
+      >
+        HOME
+      </NavLink>
+    </li>
+      
+    <li onClick={() => setPhoneOpen(false)}>
+      <NavLink
+        to="/Facilities"
+        className={({ isActive }) =>
+          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
+        }
+      >
+        FACILITIES
+      </NavLink>
+    </li>
+     
+    <li onClick={() => setPhoneOpen(false)}>
+      <NavLink
+        to="/contact-us"
+        className={({ isActive }) =>
+          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
+        }
+      >
+        CONTACT US
+      </NavLink>
+    </li>
+    
+    <li onClick={() => setPhoneOpen(false)}>
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
+        }
+      >
+        ABOUT US
+      </NavLink>
+    </li>
+  </ul>
+</div>
     </div>
   )
 }
