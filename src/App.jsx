@@ -6,6 +6,7 @@ import Home from './pages/Home.jsx'
 import Layout from './pages/Layout.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import AppointmentPage from './pages/AppointmentPage.jsx'
+import PackagesPage from './pages/PackagesPage.jsx'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/facilities' element={<FacilitiesPage />} />
         <Route path='/contact-us' element={<ContactPage />} />
         <Route path='/book-appointment' element={<AppointmentPage />} />
+        <Route path='/packages' element={<PackagesPage />} />
       </Route>
 
 

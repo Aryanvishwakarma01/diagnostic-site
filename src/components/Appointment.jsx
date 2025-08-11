@@ -9,30 +9,88 @@ const Appointment = () => {
         age: "",
         gender: "",
         phone: "",
-        email: "",
+        ptEmail: "",
+        appointmentDate: "",
+        ptAddress: "",
         message: ""
     });
 
-    const [isSubmitting, setIsSubmitting] = useState(false); // NEW STATE
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    // Custom validation function
+    const validateForm = () => {
+        const requiredFields = [
+            { field: 'testName', message: 'Please select a test' },
+            { field: 'patientName', message: 'Patient name is required' },
+            { field: 'age', message: 'Age is required' },
+            { field: 'gender', message: 'Please select gender' },
+            { field: 'phone', message: 'Phone number is required' },
+            { field: 'ptEmail', message: 'Email is required' },
+            { field: 'appointmentDate', message: 'Appointment date is required' },
+            { field: 'ptAddress', message: 'Address is required' }
+        ];
+
+        for (let item of requiredFields) {
+            if (!formData[item.field] || formData[item.field].trim() === '') {
+                toast.error(item.message);
+                return false;
+            }
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.ptEmail)) {
+            toast.error('Please enter a valid email address');
+            return false;
+        }
+
+        // Phone validation (10 digits)
+        const phoneRegex = /^\d{10}$/;
+        if (!phoneRegex.test(formData.phone)) {
+            toast.error('Phone number must be exactly 10 digits');
+            return false;
+        }
+
+        // Age validation
+        const age = parseInt(formData.age);
+        if (isNaN(age) || age < 1 || age > 120) {
+            toast.error('Please enter a valid age (1-120)');
+            return false;
+        }
+
+        return true;
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        setIsSubmitting(true); // Start submitting
+        
+        // Validate form before submitting
+        if (!validateForm()) {
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        // Prepare data for email (matching your original structure)
+        const emailData = {
+            ...formData,
+            email: formData.ptEmail, // Map ptEmail to email for emailjs template
+            message: formData.message || "No additional Information"
+        };
 
         emailjs
             .send(
                 "service_hpexoqa",
                 "template_m7m88xd",
-                formData,
+                emailData,
                 "JYa2rapV2h5sKJbQY"
             )
             .then(
                 () => {
-                    // alert("Appointment sent successfully!");
                     toast.success("Appointment sent successfully!");
                     setFormData({
                         testName: "",
@@ -45,12 +103,12 @@ const Appointment = () => {
                         ptAddress: "",
                         message: ""
                     });
-                    setIsSubmitting(false); // Reset button text
+                    setIsSubmitting(false);
                 },
                 (error) => {
                     console.error(error.text);
-                    toast("Failed to send appointment.");
-                    setIsSubmitting(false); // Reset even if failed
+                    toast.error("Failed to send appointment.");
+                    setIsSubmitting(false);
                 }
             );
     };
@@ -69,15 +127,17 @@ const Appointment = () => {
 
                 {/* Form Container */}
                 <div className='bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden'>
-                    <div className='bg-gradient-to-r from-blue-600 to-green-600 px-6  py-3'>
+                    <div className='bg-gradient-to-r from-[#10a056] to-[#068141]
+
+ px-6  py-3'>
                         <h2 className='text-white text-xl font-semibold flex items-center gap-2'>
                             <i className="ri-calendar-check-fill text-2xl"></i>
                             Patient Information
-                        </h2>
+                        </h2> 
                     </div>
 
                     <div className='p-8'>
-                        <div className='space-y-8'>
+                        <form onSubmit={handleSubmit} className='space-y-8'>
 
                             {/* Test Name */}
                             <div className='space-y-2'>
@@ -125,9 +185,11 @@ const Appointment = () => {
                                         Age
                                     </label>
                                     <input
-                                        type="text"
+                                        type="number"
                                         name="age"
                                         placeholder='Enter patient age'
+                                        min="1"
+                                        max="120"
                                         value={formData.age}
                                         onChange={handleChange}
                                         className='w-full rounded-lg border-2 border-gray-200 p-4 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white'
@@ -140,10 +202,11 @@ const Appointment = () => {
                                         Phone No.
                                     </label>
                                     <input
-                                        type="text"
+                                        type="tel"
                                         name="phone"
                                         placeholder='Enter patient phone'
                                         maxLength={10}
+                                        pattern="[0-9]{10}"
                                         value={formData.phone}
                                         onChange={handleChange}
                                         className='w-full rounded-lg border-2 border-gray-200 p-4 placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 bg-gray-50 hover:bg-white'
@@ -250,7 +313,7 @@ const Appointment = () => {
                             {/* Submit Button */}
                             <div className='flex justify-center pt-6'>
                                 <button
-                                    onClick={handleSubmit}
+                                    type="submit"
                                     disabled={isSubmitting}
                                     className='group bg-gradient-to-r from-green-600 to-green-700 hover:from-orange-500 hover:to-red-500 text-white font-bold py-4 px-8 rounded-full text-sm sm:text-[16px] shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center gap-3'
                                 >
@@ -268,7 +331,7 @@ const Appointment = () => {
                                 </button>
                             </div>
 
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

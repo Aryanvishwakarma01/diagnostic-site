@@ -22,6 +22,19 @@ function RightNav() {
           
         <li className="relative group">
           <NavLink
+            to="/packages"
+            className={({ isActive }) =>
+              isActive 
+                ? "text-orange-500 font-bold" 
+                : "text-gray-700 hover:text-orange-500 transition-all duration-300 group-hover:scale-105"
+            }
+          >
+            Packages
+          </NavLink>
+          <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></div>
+        </li>
+        <li className="relative group">
+          <NavLink
             to="/facilities"
             className={({ isActive }) =>
               isActive 
@@ -33,6 +46,7 @@ function RightNav() {
           </NavLink>
           <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></div>
         </li>
+
 
         <li className="relative group">
           <NavLink

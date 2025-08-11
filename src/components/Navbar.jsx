@@ -31,10 +31,19 @@ function Navbar() {
           isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
         }
       >
-        HOME
+        Home
       </NavLink>
     </li>
-      
+       <li onClick={() => setPhoneOpen(false)}>
+      <NavLink
+        to="/packages"
+        className={({ isActive }) =>
+          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
+        }
+      >
+        Packages
+      </NavLink>
+    </li>
     <li onClick={() => setPhoneOpen(false)}>
       <NavLink
         to="/Facilities"
@@ -42,7 +51,7 @@ function Navbar() {
           isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
         }
       >
-        FACILITIES
+        Facilities
       </NavLink>
     </li>
      
@@ -53,7 +62,7 @@ function Navbar() {
           isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
         }
       >
-        CONTACT US
+        Contact Us
       </NavLink>
     </li>
     
@@ -64,7 +73,7 @@ function Navbar() {
           isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
         }
       >
-        ABOUT US
+       About Us
       </NavLink>
     </li>
   </ul>
