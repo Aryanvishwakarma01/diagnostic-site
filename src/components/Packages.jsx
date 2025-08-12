@@ -188,7 +188,7 @@ const Packages = () => {
                         <span className={`text-transparent bg-clip-text bg-gradient-to-r bg-orange-500 transition-all duration-500`}> Health Package</span>
                     </h1>
                     <div className={`w-24 h-1 bg-gradient-to-r bg-orange-500 mx-auto rounded-full mb-6 transition-all duration-500`}></div>
-                    <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-gray-600 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
                         Comprehensive health packages designed by medical experts. Get multiple tests at discounted prices.
                     </p>
                 </div>
