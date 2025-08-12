@@ -243,7 +243,7 @@ const Packages = () => {
                                     <div className={`inline-block ${accentColors.light} ${accentColors.text} px-3 py-1 rounded-full text-sm font-medium mb-3`}>
                                         {currentPackage.category}
                                     </div>
-                                    <h3 className="text-3xl font-bold text-gray-900 mb-2">{currentPackage.name}</h3>
+                                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{currentPackage.name}</h3>
                                     
                                     {/* Rating */}
                                     <div className="flex items-center gap-2 mb-4">
@@ -257,7 +257,7 @@ const Packages = () => {
                                 {/* Pricing */}
                                 <div className="text-right">
                                     <div className="flex items-baseline gap-2 mb-2">
-                                        <span className="text-4xl font-bold text-gray-900">₹{currentPackage.discountedPrice}</span>
+                                        <span className="text-xl sm:text-4xl font-bold text-gray-900">₹{currentPackage.discountedPrice}</span>
                                         <div className="flex flex-col items-end">
                                             {/* <span className="text-lg text-gray-500 line-through">₹{currentPackage.originalPrice}</span> */}
                                         </div>
