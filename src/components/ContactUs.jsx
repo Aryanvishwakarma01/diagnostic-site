@@ -5,11 +5,11 @@ const ContactUs = () => {
   return (
     <>
       <ContactHeading />
-      <div className='w-full bg-gradient-to-br from-blue-50 via-gray-50 to-orange-50 py-16 px-8'>
+      <div className='w-full bg-gradient-to-br from-slate-50 via-white to-gray-50 pb-10 px-8'>
         <div className='flex flex-col sm:flex-row items-center justify-center gap-10 max-w-6xl mx-auto'>
 
           {/* Location Card */}
-          <div className='group w-[280px] h-[200px] flex flex-col items-center justify-center gap-4 shadow-lg hover:shadow-2xl p-8 bg-white rounded-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100'>
+          <div className='group w-[280px] h-[200px] flex flex-col items-center justify-center gap-4 shadow-xl hover:shadow-2xl p-8 bg-white rounded-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100'>
             <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <i className="ri-map-pin-fill text-3xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300"></i>
             </div>

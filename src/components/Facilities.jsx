@@ -13,7 +13,7 @@ const Facilities = () => {
   }
 
   return (
-    <div className="facilities w-full bg-gradient-to-br from-blue-50 via-gray-50 to-green-50 px-8 py-12">
+    <div className="facilities w-full bg-gradient-to-br from-slate-50 via-white to-gray-50 px-8 py-12">
       
       {/* Facilities Cards - Horizontal Display */}
       <div id="facilities" className="flex items-center justify-center gap-8 flex-wrap mb-12 cursor-pointer">

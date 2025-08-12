@@ -10,7 +10,7 @@ const Page2 = () => {
         {/* Heading */}
         <div className="text-center sm:text-left">
           <h1 className='text-2xl sm:text-4xl font-bold leading-tight text-gray-800 mb-4'>
-            Welcome to <span className='text-orange-500'>Harsha Lab & Diagnostic</span>
+            Welcome to <span className='text-orange-500'>Harsh Lab & Diagnostic</span>
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto sm:mx-0 rounded-full"></div>
         </div>
@@ -18,7 +18,7 @@ const Page2 = () => {
         {/* Description */}
         <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
           <p className='text-sm sm:text-lg text-gray-700 leading-relaxed text-center sm:text-justify'>
-            Harsha Lab & Diagnostic, located in [Sector/Area Name, City], is a trusted name among diagnostic centers in the region. Known for its accurate and timely services, it has quickly earned a strong reputation. The center is supported by a dedicated team committed to providing quality care to patients from both nearby and distant areas.
+            Harsh Lab & Diagnostic, located in [Sector/Area Name, City], is a trusted name among diagnostic centers in the region. Known for its accurate and timely services, it has quickly earned a strong reputation. The center is supported by a dedicated team committed to providing quality care to patients from both nearby and distant areas.
           </p>
         </div>
 
