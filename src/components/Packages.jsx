@@ -277,20 +277,20 @@ const Packages = () => {
                             </button>
 
                             {/* Expand Buttons */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="flex items-center justify-center gap-5">
                                 <button
                                     onClick={() => toggleExpand('tests')}
-                                    className={`flex items-center justify-between p-4 bg-white rounded-xl border-2 ${
+                                    className={`flex items-center justify-between py-2 px-5 gap-2 sm:p-5 sm:gap-10 bg-white rounded-xl border-2 ${
                                         expandedCard === 'tests' ? accentColors.border : 'border-gray-200'
                                     } hover:shadow-md transition-all duration-200`}
                                 >
                                     <div className="flex items-center gap-3">
-                                        <div className={`w-10 h-10 ${accentColors.light} rounded-full flex items-center justify-center`}>
-                                            <Check className={`w-5 h-5 ${accentColors.text}`} />
+                                        <div className={`w-5 h-5 sm:w-10 sm:h-10 ${accentColors.light} rounded-full flex items-center justify-center`}>
+                                            <Check className={`w-3 h-3 sm:w-5 sm:h-5 ${accentColors.text}`} />
                                         </div>
                                         <div className="text-left">
-                                            <div className="font-semibold text-gray-900">Tests Included</div>
-                                            <div className="text-sm text-gray-600">{currentPackage.tests.length} tests</div>
+                                            <div className="font-semibold text-[12px] sm:text-[16px] text-gray-900">Tests Included</div>
+                                            <div className="text-[10px] sm:text-sm text-gray-600">{currentPackage.tests.length} tests</div>
                                         </div>
                                     </div>
                                     {expandedCard === 'tests' ? 
@@ -301,17 +301,17 @@ const Packages = () => {
 
                                 <button
                                     onClick={() => toggleExpand('features')}
-                                    className={`flex items-center justify-between p-4 bg-white rounded-xl border-2 ${
+                                    className={`flex items-center justify-between py-2 px-5 gap-2 sm:p-5 sm:gap-10 bg-white rounded-xl border-2 ${
                                         expandedCard === 'features' ? accentColors.border : 'border-gray-200'
                                     } hover:shadow-md transition-all duration-200`}
                                 >
                                     <div className="flex items-center gap-3">
-                                        <div className={`w-10 h-10 ${accentColors.light} rounded-full flex items-center justify-center`}>
-                                            <Star className={`w-5 h-5 ${accentColors.text}`} />
+                                        <div className={`w-5 h-5 sm:w-10 sm:h-10 ${accentColors.light} rounded-full flex items-center justify-center`}>
+                                            <Star className={`w-3 h-3 sm:w-5 sm:h-5 ${accentColors.text}`} />
                                         </div>
                                         <div className="text-left">
-                                            <div className="font-semibold text-gray-900">Key Features</div>
-                                            <div className="text-sm text-gray-600">{currentPackage.features.length} benefits</div>
+                                            <div className="font-semibold text-[12px] sm:text-[16px] text-gray-900">Key Features</div>
+                                            <div className="text-[10px] sm:text-sm text-gray-600">{currentPackage.features.length} benefits</div>
                                         </div>
                                     </div>
                                     {expandedCard === 'features' ? 
@@ -328,7 +328,7 @@ const Packages = () => {
                                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                                     {expandedCard === 'tests' && (
                                         <div>
-                                            <h4 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                                            <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                                                 <Check className={`w-5 h-5 ${accentColors.text}`} />
                                                 Tests Included ({currentPackage.tests.length})
                                             </h4>
@@ -336,7 +336,7 @@ const Packages = () => {
                                                 {currentPackage.tests.map((test, index) => (
                                                     <div key={index} className="flex items-center gap-3 p-2">
                                                         <div className={`w-2 h-2 ${accentColors.bg} rounded-full flex-shrink-0`}></div>
-                                                        <span className="text-gray-700">{test}</span>
+                                                        <span className="text-gray-700 text-sm sm:text-lg">{test}</span>
                                                     </div>
                                                 ))}
                                             </div>
@@ -345,7 +345,7 @@ const Packages = () => {
 
                                     {expandedCard === 'features' && (
                                         <div>
-                                            <h4 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                                            <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                                                 <Star className={`w-5 h-5 ${accentColors.text}`} />
                                                 Key Features
                                             </h4>
@@ -353,7 +353,7 @@ const Packages = () => {
                                                 {currentPackage.features.map((feature, index) => (
                                                     <div key={index} className="flex items-start gap-3 p-2">
                                                         <Check className={`w-5 h-5 ${accentColors.text} flex-shrink-0 mt-0.5`} />
-                                                        <span className="text-gray-700 leading-relaxed">{feature}</span>
+                                                        <span className="text-gray-700 text-sm sm:text-lg leading-relaxed">{feature}</span>
                                                     </div>
                                                 ))}
                                             </div>
