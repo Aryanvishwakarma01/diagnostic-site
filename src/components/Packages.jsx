@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const Packages = () => {
     const [selectedPackage, setSelectedPackage] = useState(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     const packages = [
         {
@@ -29,7 +30,7 @@ const Packages = () => {
                 "Lab Certified Results"
             ],
             popular: true,
-            image: "🩺",
+            // image: "🩺",
             category: "Comprehensive"
         },
         {
@@ -58,7 +59,7 @@ const Packages = () => {
                 "Detailed Blood and Urine Analysis Report"
             ],
             popular: false,
-            image: "❤️",
+            // image: "❤️",
             category: "Specialized"
         },
         {
@@ -90,7 +91,7 @@ const Packages = () => {
                 "Detailed Blood and Urine Health Analysis"
             ],
             popular: false,
-            image: "🩸",
+            // image: "🩸",
             category: "Specialized"
         },
         {
@@ -126,113 +127,167 @@ const Packages = () => {
                 "Specialist Consultation with Privacy Assured"
             ],
             popular: false,
-            image: "👩‍⚕️",
+            // image: "👩‍⚕️",
             category: "Specialized"
         },
-
     ];
 
     const handleBookAppointment = (packageData) => {
         setSelectedPackage(packageData);
-        // You can integrate this with your appointment booking system
         console.log('Booking appointment for:', packageData.name);
     };
 
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % packages.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + packages.length) % packages.length);
+    };
+
+    const currentPackage = packages[currentSlide];
+
     return (
-        <div className='w-full bg-gradient-to-br from-blue-50 via-white to-green-50 py-16 px-4'>
-            <div className='max-w-7xl mx-auto'>
+        <div className='w-full bg-gray-50 py-16 px-4'>
+            <div className='max-w-4xl mx-auto'>
                 {/* Header */}
                 <div className='text-center mb-12'>
-                    <h1 className='text-[25px] sm:text-5xl font-bold tracking-wide text-gray-800 mb-4'>
+                    <h1 className='text-4xl font-bold text-gray-800 mb-4'>
                         Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500'>Packages</span>
                     </h1>
                     <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full mb-6"></div>
-                    <p className="text-gray-600 text-[14px] sm:text-xl max-w-2xl mx-auto">
+                    <p className="text-gray-600 text-lg max-w-2xl mx-auto">
                         Comprehensive health packages designed for your specific needs. Get multiple tests at discounted prices with expert consultations included.
                     </p>
                 </div>
 
-                {/* Packages Grid */}
-                <div className='flex flex-wrap gap-40 justify-center'>
-                    {packages.map((pkg) => (
-                        <div key={pkg.id} className='relative bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] flex-shrink-0'>
-                            {/* Popular Badge */}
-                            {pkg.popular && (
-                                <div className='absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10'>
-                                    Most Popular
-                                </div>
-                            )}
+                {/* Slider Container */}
+                <div className='relative'>
+                    {/* Navigation Arrows */}
+                    <button
+                        onClick={prevSlide}
+                        className='absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white border border-gray-300 w-12 h-12 flex items-center justify-center hover:bg-gray-50 transition-colors z-10'
+                        disabled={currentSlide === 0}
+                    >
+                        <span className='text-gray-600 text-xl'>←</span>
+                    </button>
 
-                            {/* Package Header */}
-                            <div className='bg-gradient-to-r from-blue-600 to-green-600 p-6 text-white'>
-                                <div className='flex items-center justify-between mb-4'>
-                                    <div className='text-4xl'>{pkg.image}</div>
-                                    <div className='text-right'>
-                                        <div className='flex items-center gap-1 mb-1'>
-                                            <i className="ri-star-fill text-yellow-400 text-sm"></i>
-                                            <span className='text-sm font-medium'>{pkg.rating}</span>
-                                            <span className='text-xs opacity-80'>({pkg.reviews})</span>
+                    <button
+                        onClick={nextSlide}
+                        className='absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white border border-gray-300 w-12 h-12 flex items-center justify-center hover:bg-gray-50 transition-colors z-10'
+                        disabled={currentSlide === packages.length - 1}
+                    >
+                        <span className='text-gray-600 text-xl'>→</span>
+                    </button>
+
+                    {/* Slider Content */}
+                    <div className='overflow-hidden'>
+                        <div 
+                            className='flex transition-transform duration-500 ease-in-out'
+                            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                        >
+                            {packages.map((pkg, index) => (
+                                <div key={pkg.id} className='w-full flex-shrink-0 px-4'>
+                                    <div className='bg-white border border-gray-200 max-w-2xl mx-auto relative'>
+                                        {/* Popular Badge */}
+                                        {pkg.popular && (
+                                            <div className='absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-1 text-sm font-semibold z-10'>
+                                                Most Popular
+                                            </div>
+                                        )}
+
+                                        {/* Package Header */}
+                                        <div className='bg-green-600 p-6 py-3 text-white'>
+                                            <div className='flex items-center justify-between mb-4'>
+                                                {/* <div className='text-4xl'>{pkg.image}</div> */}
+                                                {/* <div className='text-right'>
+                                                    <div className='flex items-center gap-1 mb-1'>
+                                                        <span className='text-yellow-300'>★</span>
+                                                        <span className='text-sm font-medium'>{pkg.rating}</span>
+                                                        <span className='text-xs opacity-80'>({pkg.reviews})</span>
+                                                    </div>
+                                                    <div className='text-xs opacity-80'>
+                                                        {pkg.duration}
+                                                    </div>
+                                                </div> */}
+                                            </div>
+                                            <h3 className='text-xl font-bold mb-2'>{pkg.name}</h3>
+                                            <div className='text-xs bg-white/20 px-2 py-1 w-fit'>
+                                                {pkg.category}
+                                            </div>
                                         </div>
-                                        <div className='text-xs opacity-80 flex items-center gap-1'>
-                                            <i className="ri-time-fill text-xs"></i>
-                                            {pkg.duration}
+
+                                        {/* Pricing */}
+                                        <div className='p-6 pb-4'>
+                                            <div className='flex items-center gap-3 mb-4'>
+                                                <span className='text-3xl font-bold text-gray-800'>₹{pkg.discountedPrice}</span>
+                                                <div className='flex flex-col'>
+                                                    {/* <span className='text-lg text-gray-400 line-through'>₹{pkg.originalPrice}</span> */}
+                                                    {/* <span className='text-green-600 font-semibold text-sm'>{pkg.discount}</span> */}
+                                                </div>
+                                            </div>
+
+                                            {/* Tests Included */}
+                                            <div className='mb-4'>
+                                                <h4 className='font-semibold text-gray-800 mb-3 flex items-center gap-2'>
+                                                    <span className='text-green-600'>✓</span>
+                                                    Tests Included ({pkg.tests.length})
+                                                </h4>
+                                                <div className=' overflow-y-auto'>
+                                                    <ul className='space-y-1'>
+                                                        {pkg.tests.map((test, testIndex) => (
+                                                            <li key={testIndex} className='flex items-start gap-2 text-sm text-gray-600'>
+                                                                <div className='w-2 h-2 bg-orange-500 rounded-full mt-1.5 flex-shrink-0'></div>
+                                                                {test}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            {/* Features */}
+                                            <div className='mb-6'>
+                                                <h4 className='font-semibold text-gray-800 mb-3 flex items-center gap-2'>
+                                                    <span className='text-orange-500'>★</span>
+                                                    Features
+                                                </h4>
+                                                <ul className='space-y-2'>
+                                                    {pkg.features.map((feature, featureIndex) => (
+                                                        <li key={featureIndex} className='flex items-start gap-2 text-sm text-gray-600'>
+                                                            <span className='text-green-500 font-bold'>✓</span>
+                                                            {feature}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+
+                                          
                                         </div>
                                     </div>
                                 </div>
-                                <h3 className='text-xl font-bold mb-2'>{pkg.name}</h3>
-                                <div className='text-xs bg-white/20 px-2 py-1 rounded-full w-fit'>
-                                    {pkg.category}
-                                </div>
-                            </div>
-
-                            {/* Pricing */}
-                            <div className='p-6 pb-4'>
-                                <div className='flex items-center gap-3 mb-4'>
-                                    <span className='text-3xl font-bold text-gray-800'>₹{pkg.discountedPrice}</span>
-                                    <div className='flex flex-col'>
-                                        {/* <span className='text-lg text-gray-400 line-through'>₹{pkg.originalPrice}</span> */}
-                                        {/* <span className='text-green-600 font-semibold text-sm'>{pkg.discount}</span> */}
-                                    </div>
-                                </div>
-
-                                {/* Tests Included */}
-                                <div className='mb-4'>
-                                    <h4 className='font-semibold text-gray-800 mb-3 flex items-center gap-2'>
-                                        <i className="ri-checkbox-circle-fill text-green-600 text-lg"></i>
-                                        Tests Included ({pkg.tests.length})
-                                    </h4>
-                                    <div className='max-h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300'>
-                                        <ul className='space-y-1'>
-                                            {pkg.tests.map((test, index) => (
-                                                <li key={index} className='flex items-start gap-2 text-sm text-gray-600'>
-                                                    <div className='w-2 h-2 bg-blue-500 rounded-full mt-1.5 flex-shrink-0'></div>
-                                                    {test}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                {/* Features */}
-                                <div className='mb-2'>
-                                    <h4 className='font-semibold text-gray-800 mb-3 flex items-center gap-2'>
-                                        <i className="ri-star-fill text-orange-500 text-lg"></i>
-                                        Features
-                                    </h4>
-                                    <ul className='space-y-2'>
-                                        {pkg.features.map((feature, index) => (
-                                            <li key={index} className='flex items-center gap-2 text-sm text-gray-600'>
-                                                <i className="ri-checkbox-circle-fill text-green-500 text-sm"></i>
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                              
-                            </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+
+                    {/* Slide Indicators */}
+                    <div className='flex justify-center mt-6 gap-2'>
+                        {packages.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentSlide(index)}
+                                className={`w-3 h-3 rounded-full transition-colors ${
+                                    currentSlide === index 
+                                        ? 'bg-orange-500' 
+                                        : 'bg-gray-300 hover:bg-gray-400'
+                                }`}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Package Counter */}
+                    <div className='text-center mt-4 text-gray-600'>
+                        {currentSlide + 1} of {packages.length}
+                    </div>
                 </div>
             </div>
         </div>
