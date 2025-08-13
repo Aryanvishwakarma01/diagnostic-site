@@ -2,9 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: "ri-facebook-fill", href: "#", label: "Facebook" },
-    { icon: "ri-twitter-fill", href: "#", label: "Twitter" },
-    { icon: "ri-instagram-fill", href: "#", label: "Instagram" },
+    { icon: "ri-facebook-fill", href: "https://www.facebook.com/share/16oVyLeg37/", label: "Facebook" },
+    { icon: "ri-twitter-fill", href: "https://x.com/Ksharshadiagno?t=GF477IG0NyHb6YUYyzpZWg&s=08", label: "Twitter" },
+    { icon: "ri-instagram-fill", href: "https://www.instagram.com/ks_harsh_lab_diagnostic?igsh=MWw1OWIzMjFnYWN2dg==", label: "Instagram" },
     { icon: "ri-linkedin-fill", href: "#", label: "LinkedIn" }
   ];
 
