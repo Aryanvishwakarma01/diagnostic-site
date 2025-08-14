@@ -11,13 +11,13 @@ function Navbar() {
   return (
     <div className='navbar w-full flex items-center justify-between px-[20px] sm:px-20 py-[10px] sm:py-0 relative'>
       <div className="left_nav">
-        <img src="/logo.png" alt="" className="w-[100px] sm:w-[250px]" />
+        <img src="/logo.png" alt="" className="w-[130px] sm:w-[250px]" />
 
       </div>
 
       <li className="phone_no text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 px-3 py-[4px] rounded-2xl sm:hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"><NavLink to="/book-appointment" className='text-[12px] font-bold flex items-center gap-1'><i className="ri-calendar-check-fill inline"></i>Book Appointment</NavLink></li>
 
-      <IoIosMenu onClick={() => setPhoneOpen(prev => !prev)} className='menu_btn text-4xl cursor-pointer block sm:hidden' />
+      <IoIosMenu onClick={() => setPhoneOpen(prev => !prev)} className='menu_btn text-3xl cursor-pointer block sm:hidden' />
       <RightNav />
 
       <div className={`fixed w-full top-0 h-screen -left-[100%] z-50  bg-black/50 transition-all duration-300 ${phoneOpen && "left-0"}`}>
