@@ -9,7 +9,7 @@ function TermsofServiceHeading() {
         </h1>
         <div className={`w-24 h-1 bg-gradient-to-r bg-orange-500 mx-auto rounded-full mb-6 transition-all duration-500`}></div>
         <p className="text-gray-600 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          Protecting Your Privacy, Every Step of the Way.
+          Our Agreement for a Safe and Fair Experience.
         </p>
       </div>
   )
