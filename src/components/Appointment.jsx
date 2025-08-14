@@ -142,7 +142,7 @@ const Appointment = () => {
                             {/* Test Name */}
                             <div className='space-y-2'>
                                 <label className='text-gray-700 font-semibold flex items-center gap-2'>
-                                    <i className="ri-stethoscope-fill text-blue-600"></i>
+                                    <i className="ri-stethoscope-fill text-orange-600"></i>
                                     Test Name
                                 </label>
                                 <select
@@ -162,7 +162,7 @@ const Appointment = () => {
                             {/* Patient Name */}
                             <div className='space-y-2'>
                                 <label className='text-gray-700 font-semibold flex items-center gap-2'>
-                                    <i className="ri-user-fill text-green-600"></i>
+                                    <i className="ri-user-fill text-orange-600"></i>
                                     Patient Name
                                 </label>
                                 <input
@@ -181,7 +181,7 @@ const Appointment = () => {
                             <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
                                 <div className='space-y-2'>
                                     <label className='text-gray-700 font-semibold flex items-center gap-2'>
-                                        <i className="ri-calendar-fill text-purple-600"></i>
+                                        <i className="ri-calendar-fill text-orange-600"></i>
                                         Age
                                     </label>
                                     <input
@@ -198,7 +198,7 @@ const Appointment = () => {
                                 </div>
                                 <div className='space-y-2'>
                                     <label className='text-gray-700 font-semibold flex items-center gap-2'>
-                                        <i className="ri-phone-fill text-green-600"></i>
+                                        <i className="ri-phone-fill text-orange-600"></i>
                                         Phone No.
                                     </label>
                                     <input
@@ -219,7 +219,7 @@ const Appointment = () => {
                             <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
                                 <div className='space-y-2'>
                                     <label className='text-gray-700 font-semibold flex items-center gap-2'>
-                                        <i className="ri-user-line text-pink-600"></i>
+                                        <i className="ri-user-line text-orange-600"></i>
                                         Gender
                                     </label>
                                     <select
@@ -237,7 +237,7 @@ const Appointment = () => {
                                 </div>
                                 <div className='space-y-2'>
                                     <label className='text-gray-700 font-semibold flex items-center gap-2'>
-                                        <i className="ri-mail-fill text-blue-600"></i>
+                                        <i className="ri-mail-fill text-orange-600"></i>
                                         Email
                                     </label>
                                     <input
@@ -272,7 +272,7 @@ const Appointment = () => {
                             {/* Address */}
                             <div className='space-y-2'>
                                 <label className='text-gray-700 font-semibold flex items-center gap-2'>
-                                    <i className="ri-map-pin-fill text-red-600"></i>
+                                    <i className="ri-map-pin-fill text-orange-600"></i>
                                     Address
                                 </label>
                                 <input
@@ -290,7 +290,7 @@ const Appointment = () => {
                             {/* Message */}
                             <div className='space-y-2'>
                                 <label className='text-gray-700 font-semibold flex items-center gap-2'>
-                                    <i className="ri-message-3-fill text-indigo-600"></i>
+                                    <i className="ri-message-3-fill text-orange-600"></i>
                                     Your Message
                                 </label>
                                 <textarea

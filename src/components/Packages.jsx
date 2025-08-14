@@ -183,7 +183,7 @@ const Packages = () => {
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                         Choose Your 
                         <span className={`text-transparent bg-clip-text bg-gradient-to-r bg-orange-500 transition-all duration-500`}> Health Package</span>
                     </h1>

@@ -48,10 +48,10 @@ const Page2 = () => {
 
       {/* Image Section */}
      {/* Image Section */}
-<div className="page2_right group w-full sm:w-[30%] max-w-[200px] flex justify-center mt-6 sm:mt-0">
+<div className="page2_right group w-full sm:w-[30%] max-w-[250px] sm:max-w-[400px] flex justify-center mt-6 sm:mt-0">
   <img 
-    src="https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573868/Ultrasound_km9s52.png" 
-    className="w-full h-auto group-hover:scale-105 transition-transform duration-300" 
+    src="https://res.cloudinary.com/dfnbm55zk/image/upload/v1755183071/WhatsApp_Image_2025-08-13_at_1.20.42_AM_lpk4az.jpg" 
+    className="w-full h-auto group-hover:scale-105 transition-transform duration-300 rounded-xl" 
     alt="Medical Ultrasound Equipment"
   />
 </div>
