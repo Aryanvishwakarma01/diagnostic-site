@@ -7,6 +7,8 @@ import Layout from './pages/Layout.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import AppointmentPage from './pages/AppointmentPage.jsx'
 import PackagesPage from './pages/PackagesPage.jsx'
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx'
+import TermsOfServicePage from './pages/TermsOfServicePage.jsx'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -19,6 +21,8 @@ const App = () => {
         <Route path='/contact-us' element={<ContactPage />} />
         <Route path='/book-appointment' element={<AppointmentPage />} />
         <Route path='/packages' element={<PackagesPage />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
+        <Route path='/termsofservice' element={<TermsOfServicePage />} />
       </Route>
 
 

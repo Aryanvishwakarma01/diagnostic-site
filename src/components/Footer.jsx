@@ -143,11 +143,11 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Harsh Lab and Diagnostic Centre. All rights reserved.
             </p>
             <div className="flex space-x-4 text-xs lg:text-sm">
-              <Link to="/" className="text-gray-400 hover:text-orange-400 transition-colors duration-200">
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-orange-400 transition-colors duration-200">
                 Privacy Policy
               </Link>
               <span className="text-gray-600">|</span>
-              <Link to="/" className="text-gray-400 hover:text-orange-400 transition-colors duration-200">
+              <Link to="/termsofservice" className="text-gray-400 hover:text-orange-400 transition-colors duration-200">
                 Terms of Service
               </Link>
             </div>

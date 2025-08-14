@@ -183,7 +183,7 @@ const Packages = () => {
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-3xl sm:text-[40px] font-bold text-gray-900 mb-6">
                         Choose Your 
                         <span className={`text-transparent bg-clip-text bg-gradient-to-r bg-orange-500 transition-all duration-500`}> Health Package</span>
                     </h1>
@@ -257,7 +257,7 @@ const Packages = () => {
                                 {/* Pricing */}
                                 <div className="text-right">
                                     <div className="flex items-baseline gap-2 mb-2">
-                                        <span className="text-xl sm:text-4xl font-bold text-gray-900">₹{currentPackage.discountedPrice}</span>
+                                        <span className="text-xl sm:text-3xl font-bold text-gray-900">₹{currentPackage.discountedPrice}</span>
                                         <div className="flex flex-col items-end">
                                             {/* <span className="text-lg text-gray-500 line-through">₹{currentPackage.originalPrice}</span> */}
                                         </div>
