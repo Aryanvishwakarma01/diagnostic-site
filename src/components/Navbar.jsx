@@ -24,58 +24,53 @@ function Navbar() {
   <ul className="phone_menu z-51 list-none bg-white w-[60%] h-screen flex flex-col items-start px-5 py-15 gap-5 text-base font-medium text-black cursor-pointer relative">
     <IoCloseSharp onClick={() => setPhoneOpen(false)} className='absolute text-2xl border right-5 top-5' />
     
-    <li onClick={() => setPhoneOpen(false)}>
-      <NavLink
+  
+      <NavLink onClick={() => setPhoneOpen(false)}
         to="/"
         className={({ isActive }) =>
-          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
+          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300 w-full"
         }
       >
         Home
       </NavLink>
-    </li>
-       <li onClick={() => setPhoneOpen(false)}>
-      <NavLink
+    
+       
+      <NavLink onClick={() => setPhoneOpen(false)}
         to="/packages"
         className={({ isActive }) =>
-          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
+          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300 w-full"
         }
       >
         Packages
       </NavLink>
-    </li>
-    <li onClick={() => setPhoneOpen(false)}>
-      <NavLink
+  
+      <NavLink onClick={() => setPhoneOpen(false)}
         to="/Facilities"
         className={({ isActive }) =>
-          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
+          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300 w-full"
         }
       >
         Facilities
       </NavLink>
-    </li>
-     
-    <li onClick={() => setPhoneOpen(false)}>
-      <NavLink
+    
+      <NavLink onClick={() => setPhoneOpen(false)}
         to="/contact-us"
         className={({ isActive }) =>
-          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
+          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300 w-full"
         }
       >
         Contact Us
       </NavLink>
-    </li>
     
-    <li onClick={() => setPhoneOpen(false)}>
-      <NavLink
+      <NavLink onClick={() => setPhoneOpen(false)}
         to="/about"
         className={({ isActive }) =>
-          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300"
+          isActive ? "text-orange-500" : "text-black hover:text-orange-500 transition duration-300 w-full"
         }
       >
        About Us
       </NavLink>
-    </li>
+  
   </ul>
 </div>
     </div>
