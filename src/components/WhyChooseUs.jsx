@@ -31,17 +31,16 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-50 pt-2 pb-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
             Why  <span className="text-orange-500"> Choose Us</span>
           </h2>
           <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
           <p className="text-[15px] sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Trusted partner for accurate diagnostics and exceptional care.
-
           </p>
         </div>
 
