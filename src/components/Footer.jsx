@@ -64,7 +64,7 @@ const Footer = () => {
               </h2>
             </div>
             <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed text-center">
-              Harsh Lab & Diagnostic, located in Ludhiana, Punjab, is a trusted name among 
+              Harsh Lab & Diagnostic, located in [address], is a trusted name among 
               diagnostic centers in the region. Known for its accurate and timely services, 
               we have quickly earned a strong reputation for excellence in healthcare diagnostics.
             </p>

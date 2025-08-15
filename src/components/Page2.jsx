@@ -19,7 +19,7 @@ const Page2 = () => {
         {/* Description */}
         <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
           <p className='text-sm sm:text-lg text-gray-700 leading-relaxed text-center sm:text-justify'>
-            Harsh Lab & Diagnostic, located in Sector 22, Mohali, is a trusted name among diagnostic centers in the region. Known for its accurate and timely services, it has quickly earned a strong reputation. The center is supported by a dedicated team committed to providing quality care to patients from both nearby and distant areas.
+            Harsh Lab & Diagnostic, located in [address], is a trusted name among diagnostic centers in the region. Known for its accurate and timely services, it has quickly earned a strong reputation. The center is supported by a dedicated team committed to providing quality care to patients from both nearby and distant areas.
           </p>
         </div>
 
