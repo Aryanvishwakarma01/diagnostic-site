@@ -1,6 +1,5 @@
 import React from 'react'
-// import xray from '../components/xray.jpg'
-import xray from '../images/xray.jpg';
+// import xray from '../images/xray.jpg';
 
 const FacilitiesHeading = () => {
   return (

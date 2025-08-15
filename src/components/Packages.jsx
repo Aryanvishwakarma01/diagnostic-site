@@ -183,13 +183,14 @@ const Packages = () => {
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h1 className="text-3xl sm:text-[40px] font-bold text-gray-900 mb-6">
+                    <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">
                         Choose Your 
                         <span className={`text-transparent bg-clip-text bg-gradient-to-r bg-orange-500 transition-all duration-500`}> Health Package</span>
                     </h1>
                     <div className={`w-24 h-1 bg-gradient-to-r bg-orange-500 mx-auto rounded-full mb-6 transition-all duration-500`}></div>
-                    <p className="text-gray-600 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
-                        Comprehensive health packages designed by medical experts. Get multiple tests at discounted prices.
+                    <p className="text-gray-600 text-[15px] sm:text-xl max-w-2xl px-6 mx-auto leading-relaxed">
+                        Expert-designed health packages with multiple tests at discounted rates.
+
                     </p>
                 </div>
 
@@ -243,7 +244,7 @@ const Packages = () => {
                                     <div className={`inline-block ${accentColors.light} ${accentColors.text} px-3 py-1 rounded-full text-sm font-medium mb-3`}>
                                         {currentPackage.category}
                                     </div>
-                                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{currentPackage.name}</h3>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{currentPackage.name}</h3>
                                     
                                     {/* Rating */}
                                     <div className="flex items-center gap-2 mb-4">
@@ -257,7 +258,7 @@ const Packages = () => {
                                 {/* Pricing */}
                                 <div className="text-right">
                                     <div className="flex items-baseline gap-2 mb-2">
-                                        <span className="text-xl sm:text-3xl font-bold text-gray-900">₹{currentPackage.discountedPrice}</span>
+                                        <span className="text-xl sm:text-2xl font-bold text-gray-900">₹{currentPackage.discountedPrice}</span>
                                         <div className="flex flex-col items-end">
                                             {/* <span className="text-lg text-gray-500 line-through">₹{currentPackage.originalPrice}</span> */}
                                         </div>
@@ -271,7 +272,7 @@ const Packages = () => {
                             {/* Book Button */}
                             <button 
                                 onClick={() => handleBookAppointment(currentPackage)}
-                                className={`w-full bg-green-600 text-white py-4 px-6 rounded-2xl text-lg font-semibold hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 mb-6 cursor-pointer`}
+                                className={`w-full bg-green-600 text-white py-2 sm:py-4 px-2 sm:px-6 rounded-2xl text-lg font-semibold hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 mb-6 cursor-pointer`}
                             >
                                 <a href="tel:9646548046">Book Now</a>
                             </button>

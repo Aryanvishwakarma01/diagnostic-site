@@ -6,13 +6,13 @@ import { NavLink } from "react-router-dom";
 
 const slides = [
   {
-    image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573866/img1_afjdka.jpg",
+    image: "https://plus.unsplash.com/premium_photo-1702598750066-3ee28dbc860a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Electrocardiogram",
     description: "ECG records heart's electrical activity to detect various heart conditions.",
     bg: "from-orange-500 to-red-500"
   },
   {
-    image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573866/img2_ouhadg.jpg",
+    image: "https://plus.unsplash.com/premium_photo-1661440316279-8a3c84015bb7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Blood Collection",
     description: "Drawing blood from veins to test, diagnose, or monitor health.",
     bg: "from-green-500 to-teal-500"

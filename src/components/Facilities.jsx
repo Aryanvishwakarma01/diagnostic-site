@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Facilities = () => {
   const facilitiesArr = [
     { image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573867/ecg_sszl5v.jpg", name: "Electrocardiogram" },
-    { image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573866/bloodsample_lw9chz.jpg", name: "Blood Collect From Home" },
+    { image: "https://images.unsplash.com/photo-1625131135576-97ddbb6f063c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", name: "Blood Sample at Home" },
     { image: "https://res.cloudinary.com/dfnbm55zk/image/upload/v1754573867/bloodcollection_qu9duw.png", name: "Blood Collection" }
   ];
 
@@ -13,7 +13,7 @@ const Facilities = () => {
   }
 
   return (
-    <div className="facilities w-full bg-gradient-to-br from-slate-50 via-white to-gray-50 px-8 py-12">
+    <div className="facilities w-full bg-slate-50 px-8 py-12">
       
       {/* Facilities Cards - Horizontal Display */}
       <div id="facilities" className="flex items-center justify-center gap-8 flex-wrap mb-12 cursor-pointer">
@@ -30,7 +30,7 @@ const Facilities = () => {
               />
             </div>
             <div className='h-[25%] flex items-center justify-center px-4 bg-gradient-to-r from-blue-50 to-green-50'>
-              <h1 className="text-center text-base font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 leading-tight">
+              <h1 className="text-center text-base font-bold text-gray-800 transition-colors duration-300 leading-tight">
                 {item.name}
               </h1>
             </div>
